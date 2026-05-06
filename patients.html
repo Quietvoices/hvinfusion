@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Patients | HV Infusion & Biologics – Fishkill, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --green:       #6ab04c;
+    --green-dark:  #4e8a34;
+    --green-light: #8fcc6e;
+    --teal:        #2eb8b8;
+    --teal-dark:   #1a9090;
+    --teal-light:  #55d0d0;
+    --navy:        #0d2233;
+    --navy2:       #122944;
+    --cream:       #f5f9f5;
+    --white:       #ffffff;
+    --gray:        #6b7a8d;
+    --gray-light:  #e8f0e8;
+    --border:      rgba(106,176,76,0.2);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Nunito Sans', sans-serif; color: var(--navy); background: var(--white); }
+  a { text-decoration: none; color: inherit; }
+
+  /* UTILITY */
+  .btn-green { display: inline-block; background: var(--green); color: #fff; padding: 14px 30px; border-radius: 6px; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; transition: background .2s; cursor: pointer; border: none; }
+  .btn-green:hover { background: var(--green-dark); }
+  .btn-teal { display: inline-block; background: var(--teal); color: #fff; padding: 14px 30px; border-radius: 6px; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; transition: background .2s; cursor: pointer; border: none; }
+  .btn-teal:hover { background: var(--teal-dark); }
+  .btn-outline { display: inline-block; background: transparent; color: var(--green); padding: 13px 28px; border-radius: 6px; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; border: 2px solid var(--green); transition: background .2s, color .2s; }
+  .btn-outline:hover { background: var(--green); color: #fff; }
+  .btn-outline-white { display: inline-block; background: transparent; color: #fff; padding: 13px 28px; border-radius: 6px; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; border: 2px solid rgba(255,255,255,0.5); transition: border-color .2s; }
+  .btn-outline-white:hover { border-color: #fff; }
+  .tag { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 14px; }
+  .tag::before { content: ''; display: block; width: 24px; height: 2px; background: currentColor; border-radius: 1px; }
+  .tag.green { color: var(--green); }
+  .tag.teal  { color: var(--teal); }
+  .section-title { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 38px; line-height: 1.2; margin-bottom: 14px; }
+  .section-sub { font-size: 16px; color: var(--gray); line-height: 1.7; max-width: 560px; margin-bottom: 36px; }
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 40px; }
+
+  /* NAV */
+  nav { background: var(--white); border-bottom: 1px solid var(--border); padding: 0 40px; height: 72px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+  .nav-logo { display: flex; align-items: center; }
+  .nav-brand { display: flex; flex-direction: column; gap: 1px; margin-left: 12px; }
+  .nav-brand-main { font-family: 'Nunito', sans-serif; font-size: 18px; font-weight: 700; color: var(--navy); line-height: 1; }
+  .nav-brand-main .hv  { color: var(--teal); }
+  .nav-brand-main .inf { color: var(--green); }
+  .nav-brand-main .bio { color: var(--teal); font-weight: 400; font-size: 14px; }
+  .nav-brand-sub { font-size: 9px; color: var(--gray); letter-spacing: 0.07em; }
+  .nav-links { display: flex; align-items: center; gap: 28px; }
+  .nav-links a { font-size: 13px; font-weight: 600; color: var(--navy); transition: color .15s; }
+  .nav-links a:hover { color: var(--teal); }
+  .nav-links a.active { color: var(--green); border-bottom: 2px solid var(--green); padding-bottom: 2px; }
+  .nav-links .nav-cta { background: var(--green); color: #fff; padding: 10px 22px; border-radius: 6px; font-size: 13px; font-weight: 700; transition: background .2s; }
+  .nav-links .nav-cta:hover { background: var(--green-dark); color: #fff; }
+  .nav-links .nav-refer { background: transparent; color: var(--teal); padding: 9px 20px; border-radius: 6px; border: 2px solid var(--teal); font-size: 13px; font-weight: 700; transition: background .2s, color .2s; }
+  .nav-links .nav-refer:hover { background: var(--teal); color: #fff; }
+
+  /* PAGE HERO */
+  .page-hero { background: var(--navy); padding: 72px 40px 80px; position: relative; overflow: hidden; }
+  .page-hero-bg { position: absolute; right: 0; top: 0; width: 40%; height: 100%; background: linear-gradient(135deg, rgba(46,184,184,0.06) 0%, rgba(106,176,76,0.04) 100%); border-left: 1px solid rgba(46,184,184,0.1); }
+  .page-hero-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 360px; gap: 60px; align-items: center; }
+  .breadcrumb { font-size: 12px; color: rgba(255,255,255,0.4); margin-bottom: 16px; }
+  .breadcrumb a { color: var(--green-light); }
+  .breadcrumb span { margin: 0 8px; }
+  .page-hero h1 { font-family: 'Nunito', sans-serif; font-size: 46px; font-weight: 700; color: var(--white); line-height: 1.15; margin-bottom: 18px; }
+  .page-hero h1 em { font-style: italic; font-weight: 300; color: var(--teal-light); }
+  .page-hero-sub { font-size: 17px; color: rgba(255,255,255,0.6); line-height: 1.7; margin-bottom: 32px; max-width: 500px; }
+  .page-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+  /* Quick links card */
+  .quick-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(106,176,76,0.25); border-radius: 14px; padding: 28px 24px; }
+  .quick-card-title { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green-light); margin-bottom: 16px; }
+  .quick-links { display: flex; flex-direction: column; gap: 2px; }
+  .quick-link { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-radius: 8px; cursor: pointer; transition: background .15s; color: rgba(255,255,255,0.75); font-size: 14px; font-weight: 600; }
+  .quick-link:hover { background: rgba(255,255,255,0.08); color: #fff; }
+  .quick-link-arrow { color: var(--green-light); font-size: 16px; }
+
+  /* ANCHOR NAV */
+  .anchor-nav { background: var(--cream); border-bottom: 1px solid var(--border); padding: 0 40px; }
+  .anchor-nav-inner { max-width: 1140px; margin: 0 auto; display: flex; gap: 0; overflow-x: auto; }
+  .anchor-link { padding: 16px 24px; font-size: 13px; font-weight: 600; color: var(--gray); border-bottom: 2px solid transparent; white-space: nowrap; cursor: pointer; transition: color .15s, border-color .15s; }
+  .anchor-link:hover { color: var(--green); border-color: var(--green); }
+  .anchor-link.active { color: var(--green); border-color: var(--green); }
+
+  /* WHAT TO EXPECT */
+  .expect { padding: 80px 40px; background: var(--white); }
+  .expect-inner { max-width: 1140px; margin: 0 auto; }
+  .expect-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; margin-top: 48px; }
+  .expect-steps { display: flex; flex-direction: column; gap: 0; }
+  .expect-step { display: flex; gap: 20px; padding-bottom: 32px; position: relative; }
+  .expect-step:not(:last-child)::after { content: ''; position: absolute; left: 19px; top: 48px; bottom: 0; width: 2px; background: var(--gray-light); }
+  .step-circle { width: 40px; height: 40px; border-radius: 50%; background: var(--green); color: #fff; display: flex; align-items: center; justify-content: center; font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 700; flex-shrink: 0; position: relative; z-index: 1; }
+  .expect-step:nth-child(2) .step-circle { background: var(--teal); }
+  .expect-step:nth-child(4) .step-circle { background: var(--teal); }
+  .step-content { padding-top: 8px; }
+  .step-title { font-family: 'Nunito', sans-serif; font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .step-body { font-size: 14px; color: var(--gray); line-height: 1.65; }
+
+  /* What to bring */
+  .bring-card { background: var(--cream); border-radius: 14px; padding: 32px 28px; border: 1px solid var(--border); }
+  .bring-title { font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .bring-sub { font-size: 14px; color: var(--gray); margin-bottom: 22px; }
+  .bring-list { display: flex; flex-direction: column; gap: 10px; }
+  .bring-item { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--navy); }
+  .bring-check { color: var(--green); font-size: 15px; flex-shrink: 0; margin-top: 1px; font-weight: 700; }
+  .bring-divider { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
+  .bring-tip { background: rgba(46,184,184,0.08); border-radius: 8px; padding: 14px 16px; border-left: 3px solid var(--teal); font-size: 13px; color: var(--navy); line-height: 1.6; margin-top: 16px; }
+  .bring-tip strong { color: var(--teal); }
+
+  /* COMFORT & AMENITIES */
+  .amenities { padding: 80px 40px; background: var(--cream); }
+  .amenities-inner { max-width: 1140px; margin: 0 auto; }
+  .amenities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 44px; }
+  .amenity-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; transition: border-color .2s, transform .15s; }
+  .amenity-card:hover { border-color: var(--green); transform: translateY(-2px); }
+  .amenity-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--gray-light); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+  .amenity-title { font-family: 'Nunito', sans-serif; font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .amenity-body { font-size: 13px; color: var(--gray); line-height: 1.65; }
+
+  /* INSURANCE */
+  .insurance { padding: 80px 40px; background: var(--white); }
+  .insurance-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+  .ins-plans { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 28px; }
+  .ins-badge { background: var(--cream); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; font-size: 13px; font-weight: 600; color: var(--navy); display: flex; align-items: center; gap: 8px; }
+  .ins-badge::before { content: '✓'; color: var(--green); font-weight: 700; }
+  .ins-note { background: rgba(106,176,76,0.08); border-radius: 10px; padding: 18px 20px; border: 1px solid var(--border); margin-top: 20px; font-size: 13px; color: var(--navy); line-height: 1.6; }
+  .ins-note a { color: var(--teal); font-weight: 600; }
+  .ins-process { display: flex; flex-direction: column; gap: 16px; margin-top: 28px; }
+  .ins-step { display: flex; gap: 14px; align-items: flex-start; }
+  .ins-num { width: 28px; height: 28px; border-radius: 50%; background: var(--green); color: #fff; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .ins-step-title { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+  .ins-step-body { font-size: 13px; color: var(--gray); line-height: 1.55; }
+
+  /* FAQ */
+  .faq { padding: 80px 40px; background: var(--cream); }
+  .faq-inner { max-width: 800px; margin: 0 auto; }
+  .faq-list { display: flex; flex-direction: column; gap: 0; margin-top: 40px; border-top: 1px solid var(--border); }
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-q { padding: 22px 0; display: flex; justify-content: space-between; align-items: center; cursor: pointer; gap: 16px; }
+  .faq-q-text { font-family: 'Nunito', sans-serif; font-size: 17px; font-weight: 700; color: var(--navy); }
+  .faq-icon { color: var(--green); font-size: 22px; flex-shrink: 0; transition: transform .2s; font-weight: 300; line-height: 1; }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+  .faq-a { font-size: 14px; color: var(--gray); line-height: 1.75; padding-bottom: 22px; display: none; max-width: 640px; }
+  .faq-item.open .faq-a { display: block; }
+
+  /* APPOINTMENT CTA */
+  .appt-cta { background: var(--green); padding: 72px 40px; }
+  .appt-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 400px; gap: 60px; align-items: center; }
+  .appt-title { font-family: 'Nunito', sans-serif; font-size: 38px; font-weight: 700; color: var(--white); line-height: 1.2; margin-bottom: 12px; }
+  .appt-sub { font-size: 16px; color: rgba(255,255,255,0.75); line-height: 1.7; margin-bottom: 28px; }
+  .appt-form { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 14px; padding: 28px 24px; }
+  .appt-form-title { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 16px; }
+  .form-group { margin-bottom: 12px; }
+  .form-group label { display: block; font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.7); margin-bottom: 5px; letter-spacing: 0.04em; }
+  .form-group input, .form-group select { width: 100%; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: 6px; padding: 10px 14px; font-size: 14px; color: var(--white); font-family: 'Nunito Sans', sans-serif; outline: none; transition: border-color .2s; }
+  .form-group input::placeholder { color: rgba(255,255,255,0.4); }
+  .form-group input:focus, .form-group select:focus { border-color: rgba(255,255,255,0.6); }
+  .form-group select { color: rgba(255,255,255,0.7); }
+  .form-group select option { background: var(--navy); color: var(--white); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .btn-submit { width: 100%; background: var(--white); color: var(--green); border: none; border-radius: 6px; padding: 13px; font-size: 14px; font-weight: 700; cursor: pointer; transition: opacity .2s; margin-top: 8px; font-family: 'Nunito Sans', sans-serif; letter-spacing: 0.04em; }
+  .btn-submit:hover { opacity: 0.9; }
+
+  /* FOOTER */
+  footer { background: var(--navy); padding: 56px 40px 28px; }
+  .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; max-width: 1140px; margin: 0 auto 40px; }
+  .footer-brand-name { font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+  .footer-brand-name .hv  { color: var(--teal); }
+  .footer-brand-name .inf { color: var(--green); }
+  .footer-brand-sub { font-size: 10px; color: rgba(255,255,255,0.35); letter-spacing: 0.07em; margin-bottom: 14px; }
+  .footer-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.7; margin-bottom: 14px; }
+  .footer-contact { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.8; }
+  .footer-contact a { color: var(--teal-light); }
+  .footer-col-title { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-light); font-weight: 700; margin-bottom: 16px; }
+  .footer-col-links { display: flex; flex-direction: column; gap: 9px; }
+  .footer-col-links a { font-size: 13px; color: rgba(255,255,255,0.45); transition: color .15s; }
+  .footer-col-links a:hover { color: var(--white); }
+  .footer-bottom { max-width: 1140px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.07); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+  .footer-legal { font-size: 11px; color: rgba(255,255,255,0.22); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+      <path d="M20 4 A16 16 0 1 0 34 12" stroke="#6ab04c" stroke-width="2.5" stroke-linecap="round"/>
+      <g transform="translate(30.5,8) rotate(35)">
+        <ellipse cx="0" cy="0" rx="4" ry="6" fill="#2eb8b8"/>
+        <line x1="0" y1="-5" x2="0" y2="5" stroke="#1a9090" stroke-width="0.8"/>
+      </g>
+      <text x="20" y="26" font-family="'Nunito Sans',sans-serif" font-size="11" font-weight="700" fill="#2eb8b8" text-anchor="middle">HV</text>
+    </svg>
+    <div class="nav-brand">
+      <div class="nav-brand-main"><span class="hv">HV</span> <span class="inf">Infusion</span> <span class="bio">&amp; Biologics</span></div>
+      <div class="nav-brand-sub">Hudson River Valley Medical PC</div>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="/conditions.html">Conditions</a>
+    <a href="/patients.html" class="active">For patients</a>
+    <a href="/providers.html">For providers</a>
+    <a href="/insurance.html">Insurance</a>
+    <a href="/about.html">About</a>
+    <a href="/providers.html#referral-form" class="nav-refer">Refer a patient</a>
+    <a href="/patients.html#appointment" class="nav-cta">Request appointment</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-inner">
+    <div>
+      <div class="breadcrumb"><a href="/">Home</a> <span>›</span> For patients</div>
+      <div class="tag teal">For patients</div>
+      <h1>Everything you need<br>to know before your<br><em>first infusion</em></h1>
+      <p class="page-hero-sub">We want your experience to be as smooth and comfortable as possible. Here's how to get started, what to expect, and how we'll support you every step of the way.</p>
+      <div class="page-hero-actions">
+        <a href="#appointment" class="btn-green">Request an appointment</a>
+        <a href="#expect" class="btn-outline-white">What to expect</a>
+      </div>
+    </div>
+    <div class="quick-card">
+      <div class="quick-card-title">Jump to a section</div>
+      <div class="quick-links">
+        <a href="#expect" class="quick-link">What to expect <span class="quick-link-arrow">→</span></a>
+        <a href="#comfort" class="quick-link">Comfort &amp; amenities <span class="quick-link-arrow">→</span></a>
+        <a href="#insurance" class="quick-link">Insurance &amp; billing <span class="quick-link-arrow">→</span></a>
+        <a href="#faq" class="quick-link">Frequently asked questions <span class="quick-link-arrow">→</span></a>
+        <a href="#appointment" class="quick-link">Request an appointment <span class="quick-link-arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANCHOR NAV -->
+<div class="anchor-nav">
+  <div class="anchor-nav-inner">
+    <a href="#expect"      class="anchor-link active">What to expect</a>
+    <a href="#comfort"     class="anchor-link">Comfort &amp; amenities</a>
+    <a href="#insurance"   class="anchor-link">Insurance &amp; billing</a>
+    <a href="#faq"         class="anchor-link">FAQs</a>
+    <a href="#appointment" class="anchor-link">Request appointment</a>
+  </div>
+</div>
+
+<!-- WHAT TO EXPECT -->
+<section class="expect" id="expect">
+  <div class="expect-inner">
+    <div class="tag green">Your first visit</div>
+    <h2 class="section-title">What to expect at<br>HV Infusion &amp; Biologics</h2>
+    <p class="section-sub">We've designed the entire experience to feel effortless — from your first call to your last infusion drop. Here's what the process looks like.</p>
+    <div class="expect-grid">
+      <div class="expect-steps">
+        <div class="expect-step">
+          <div class="step-circle">1</div>
+          <div class="step-content">
+            <div class="step-title">Your physician refers you</div>
+            <div class="step-body">Your doctor sends us a referral by phone, fax, or our online form. We receive it and begin the process immediately — no waiting around for paperwork to move.</div>
+          </div>
+        </div>
+        <div class="expect-step">
+          <div class="step-circle">2</div>
+          <div class="step-content">
+            <div class="step-title">We handle insurance for you</div>
+            <div class="step-body">Our team verifies your benefits, obtains prior authorization, and contacts you with a clear explanation of what's covered before you ever set foot in our center.</div>
+          </div>
+        </div>
+        <div class="expect-step">
+          <div class="step-circle">3</div>
+          <div class="step-content">
+            <div class="step-title">We schedule your appointment</div>
+            <div class="step-body">We contact you directly to find a time that works — often the same week. We're open Monday through Saturday with flexible morning and afternoon slots.</div>
+          </div>
+        </div>
+        <div class="expect-step">
+          <div class="step-circle">4</div>
+          <div class="step-content">
+            <div class="step-title">Arrive &amp; check in</div>
+            <div class="step-body">Check in at the front desk, settle into your private or semi-private suite, and meet your dedicated infusion nurse. No crowded waiting rooms — we're ready when you arrive.</div>
+          </div>
+        </div>
+        <div class="expect-step">
+          <div class="step-circle">5</div>
+          <div class="step-content">
+            <div class="step-title">Your infusion</div>
+            <div class="step-body">Your nurse will review your medication, answer any questions, and start your infusion. We monitor you closely throughout and are with you every step of the way.</div>
+          </div>
+        </div>
+        <div class="expect-step" style="padding-bottom:0;">
+          <div class="step-circle">6</div>
+          <div class="step-content">
+            <div class="step-title">Follow-up &amp; next visit</div>
+            <div class="step-body">After your infusion we send a full report to your physician and help schedule your next appointment. We make recurring treatment as seamless as possible.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bring-card">
+        <div class="bring-title">What to bring</div>
+        <div class="bring-sub">For your first visit, please bring the following:</div>
+        <div class="bring-list">
+          <div class="bring-item"><span class="bring-check">✓</span> Photo ID (driver's license or passport)</div>
+          <div class="bring-item"><span class="bring-check">✓</span> Insurance card(s)</div>
+          <div class="bring-item"><span class="bring-check">✓</span> List of current medications</div>
+          <div class="bring-item"><span class="bring-check">✓</span> Referral paperwork (if given by your doctor)</div>
+          <div class="bring-item"><span class="bring-check">✓</span> Any co-pay or cost-share amount confirmed with us in advance</div>
+        </div>
+        <div class="bring-divider"></div>
+        <div class="bring-title" style="font-size:17px;">What to bring for comfort</div>
+        <div class="bring-sub" style="margin-bottom:14px; margin-top:4px;">Infusions can take 1–4+ hours. Feel free to bring:</div>
+        <div class="bring-list">
+          <div class="bring-item"><span class="bring-check" style="color:var(--teal);">✓</span> A book, tablet, or laptop</div>
+          <div class="bring-item"><span class="bring-check" style="color:var(--teal);">✓</span> Headphones</div>
+          <div class="bring-item"><span class="bring-check" style="color:var(--teal);">✓</span> A light snack or meal</div>
+          <div class="bring-item"><span class="bring-check" style="color:var(--teal);">✓</span> A blanket or sweater (we provide these too)</div>
+          <div class="bring-item"><span class="bring-check" style="color:var(--teal);">✓</span> A companion — guests are welcome</div>
+        </div>
+        <div class="bring-tip"><strong>Pro tip:</strong> Eat a good meal and drink plenty of water before your infusion. Well-hydrated veins make the IV process smoother and faster.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMFORT & AMENITIES -->
+<section class="amenities" id="comfort">
+  <div class="amenities-inner">
+    <div class="tag green">Comfort &amp; amenities</div>
+    <h2 class="section-title">Your wellness oasis in Fishkill</h2>
+    <p class="section-sub">We designed every detail of our center to make long infusion sessions feel as comfortable and restful as possible.</p>
+    <div class="amenities-grid">
+
+      <div class="amenity-card">
+        <div class="amenity-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2" stroke-linecap="round">
+            <path d="M3 7h18M3 12h18M3 17h18"/><rect x="1" y="5" width="22" height="14" rx="3"/>
+          </svg>
+        </div>
+        <div class="amenity-title">Private &amp; semi-private suites</div>
+        <div class="amenity-body">Your own dedicated space with a plush reclining chair, soft blankets, and adjustable lighting. We protect your privacy and your comfort throughout every visit.</div>
+      </div>
+
+      <div class="amenity-card">
+        <div class="amenity-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2eb8b8" stroke-width="2" stroke-linecap="round">
+            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <div class="amenity-title">Flexible hours, 6 days a week</div>
+        <div class="amenity-body">Open Monday–Friday 8am–6pm and Saturday 9am–3pm. Sunday appointments available by request. We work around your schedule, not the other way around.</div>
+      </div>
+
+      <div class="amenity-card">
+        <div class="amenity-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2" stroke-linecap="round">
+            <path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/>
+          </svg>
+        </div>
+        <div class="amenity-title">Free Wi-Fi &amp; entertainment</div>
+        <div class="amenity-body">Stay connected or tune out — high-speed Wi-Fi is complimentary and personal TV screens are available so you can stream, browse, or catch up on work.</div>
+      </div>
+
+      <div class="amenity-card">
+        <div class="amenity-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2eb8b8" stroke-width="2" stroke-linecap="round">
+            <path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/>
+          </svg>
+        </div>
+        <div class="amenity-title">Complimentary refreshments</div>
+        <div class="amenity-body">Coffee, tea, water, and light snacks are available throughout your visit at no charge. We want you to feel at home from the moment you walk in.</div>
+      </div>
+
+      <div class="amenity-card">
+        <div class="amenity-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2" stroke-linecap="round">
+            <rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h6v8a2 2 0 0 1-2 2h-4V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+        </div>
+        <div class="amenity-title">Free parking — always</div>
+        <div class="amenity-body">Ample free parking right outside our door at 400 Westage Business Center Drive. No garages, no meters, no stress.</div>
+      </div>
+
+      <div class="amenity-card">
+        <div class="amenity-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2eb8b8" stroke-width="2" stroke-linecap="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <div class="amenity-title">Compassionate, expert nursing</div>
+        <div class="amenity-body">Our infusion-trained nursing team gets to know you — your preferences, your history, your comfort level. You're never just a chart number here.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- INSURANCE -->
+<section class="insurance" id="insurance">
+  <div class="insurance-inner">
+    <div>
+      <div class="tag green">Insurance &amp; billing</div>
+      <h2 class="section-title">We accept most<br>major insurance plans</h2>
+      <p class="section-sub">We work with most major commercial insurance providers and Medicare. Our team handles benefits verification and prior authorization so you don't have to.</p>
+      <div class="ins-plans">
+        <div class="ins-badge">Aetna</div>
+        <div class="ins-badge">Blue Cross Blue Shield</div>
+        <div class="ins-badge">Cigna</div>
+        <div class="ins-badge">United Healthcare</div>
+        <div class="ins-badge">Medicare</div>
+        <div class="ins-badge">Emblem Health</div>
+        <div class="ins-badge">MVP Health Care</div>
+        <div class="ins-badge">Humana</div>
+        <div class="ins-badge">Excellus BCBS</div>
+        <div class="ins-badge">Tricare</div>
+      </div>
+      <div class="ins-note">Don't see your plan? <a href="#">Contact us</a> — we accept many additional plans and can verify your coverage within one business day.</div>
+    </div>
+    <div>
+      <div class="tag teal">How the billing process works</div>
+      <h2 class="section-title" style="font-size:28px;">No surprises — we<br>walk you through it all</h2>
+      <p class="section-sub" style="font-size:14px;">Before your first infusion, we make sure you fully understand your coverage and any out-of-pocket costs.</p>
+      <div class="ins-process">
+        <div class="ins-step">
+          <div class="ins-num">1</div>
+          <div>
+            <div class="ins-step-title">Benefits verification</div>
+            <div class="ins-step-body">We contact your insurance company to confirm your infusion benefits and determine your deductible, co-pay, and co-insurance amounts.</div>
+          </div>
+        </div>
+        <div class="ins-step">
+          <div class="ins-num">2</div>
+          <div>
+            <div class="ins-step-title">Prior authorization</div>
+            <div class="ins-step-body">Many biologic medications require prior authorization. We obtain this on your behalf and track the status so you're not waiting in the dark.</div>
+          </div>
+        </div>
+        <div class="ins-step">
+          <div class="ins-num">3</div>
+          <div>
+            <div class="ins-step-title">Cost estimate for you</div>
+            <div class="ins-step-body">We contact you with a clear cost estimate before your first visit so there are no billing surprises after the fact.</div>
+          </div>
+        </div>
+        <div class="ins-step">
+          <div class="ins-num">4</div>
+          <div>
+            <div class="ins-step-title">Manufacturer assistance programs</div>
+            <div class="ins-step-body">Many biologic manufacturers offer co-pay assistance programs. We help identify and apply for programs that may reduce or eliminate your out-of-pocket costs.</div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:28px;">
+        <a href="#appointment" class="btn-green">Talk to our billing team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div class="tag green">Frequently asked questions</div>
+    <h2 class="section-title">Questions patients ask us most</h2>
+    <div class="faq-list">
+
+      <div class="faq-item open">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-text">How long does an infusion appointment take?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Infusion times vary depending on the medication and your individual treatment plan. Most biologic infusions take between 1 and 4 hours. Your physician and our nursing team will give you a specific estimate based on your medication. We recommend planning for a little extra time on your first visit as we complete intake paperwork and get you settled.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-text">Do I need a referral from my doctor?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Yes — a physician referral is required for all infusion treatments. Your doctor will send us a prescription and referral, which our team uses to verify your insurance and order your medication. If you're not sure how to ask your doctor, we're happy to help guide you. Call us at (845) 848-3626.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-text">Will my insurance cover infusion at your center?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">We accept most major commercial insurance plans and Medicare. Our billing team will verify your benefits before your first appointment and provide a clear cost estimate. In many cases, receiving infusion therapy at an outpatient center like ours is significantly less expensive than a hospital setting — which can benefit both you and your insurer.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-text">Can I bring a family member or friend?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Absolutely. Guests are welcome and we encourage it — having a companion can make long infusion sessions much more comfortable. We have seating available for guests in each suite. Please let us know when scheduling if you're planning to bring someone.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-text">What should I eat before my infusion?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">We recommend eating a full, balanced meal before your infusion and drinking plenty of water. Good hydration helps with IV access and can reduce the likelihood of side effects. Avoid heavy, fatty foods right before your infusion. If you have specific dietary requirements related to your condition or medication, your physician will advise you accordingly.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-text">What happens if I have a reaction during my infusion?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Our nursing staff is trained in infusion reaction management and emergency response. We monitor you closely throughout your infusion and are prepared to manage any reaction promptly. In the rare event of a serious reaction, we have emergency protocols in place and will contact your physician immediately. Your safety is our first priority.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-text">How do I reschedule or cancel an appointment?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Please give us at least 24 hours notice if you need to reschedule or cancel. Because your medication is ordered specifically for your appointment, last-minute cancellations can result in wasted medication. Call us at (845) 848-3626 as soon as possible and we'll find a new time that works for you.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- APPOINTMENT CTA -->
+<section class="appt-cta" id="appointment">
+  <div class="appt-inner">
+    <div>
+      <div class="tag white">Get started today</div>
+      <h2 class="appt-title">Request your first appointment</h2>
+      <p class="appt-sub">Fill out the form and our team will contact you within one business day to confirm your visit, verify your insurance, and answer any questions.</p>
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:rgba(255,255,255,0.7);">
+          <span style="color:#fff; font-size:16px;">✓</span> No upfront payment required to request
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:rgba(255,255,255,0.7);">
+          <span style="color:#fff; font-size:16px;">✓</span> We verify insurance before you visit
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:rgba(255,255,255,0.7);">
+          <span style="color:#fff; font-size:16px;">✓</span> Often scheduled within the same week
+        </div>
+        <div style="display:flex; align-items:center; gap:10px; font-size:14px; color:rgba(255,255,255,0.7);">
+          <span style="color:#fff; font-size:16px;">✓</span> Or call us directly: <a href="tel:8458483626" style="color:#fff; font-weight:700;">&nbsp;(845) 848-3626</a>
+        </div>
+      </div>
+    </div>
+    <div class="appt-form">
+      <div class="appt-form-title">Appointment request</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>First name</label>
+          <input type="text" placeholder="Jane">
+        </div>
+        <div class="form-group">
+          <label>Last name</label>
+          <input type="text" placeholder="Smith">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Phone number</label>
+        <input type="tel" placeholder="(845) 000-0000">
+      </div>
+      <div class="form-group">
+        <label>Email address</label>
+        <input type="email" placeholder="jane@email.com">
+      </div>
+      <div class="form-group">
+        <label>Condition / specialty</label>
+        <select>
+          <option value="">Select one...</option>
+          <option>Rheumatology</option>
+          <option>Neurology</option>
+          <option>Gastroenterology</option>
+          <option>Allergy &amp; Immunology</option>
+          <option>Weight Management (GLP-1)</option>
+          <option>Other / Not sure</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Insurance provider</label>
+        <input type="text" placeholder="e.g. Aetna, BCBS, Medicare">
+      </div>
+      <button class="btn-submit">Submit appointment request</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name"><span class="hv">HV</span> <span class="inf">Infusion</span> <span style="color:var(--teal); font-weight:400;">&amp; Biologics</span></div>
+      <div class="footer-brand-sub">Hudson River Valley Medical PC</div>
+      <p class="footer-desc">Advanced biologic and specialty infusion therapy in a comfortable, patient-centered environment — serving Fishkill, Dutchess County, and the greater Hudson Valley.</p>
+      <div class="footer-contact">
+        <div>400 Westage Business Center Dr, Suite 102A, Fishkill NY 12524</div>
+        <div><a href="tel:8458483626">(845) 848-3626</a></div>
+        <div>Mon–Fri 8am–6pm · Sat 9am–3pm · Sun by appt</div>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Conditions</div>
+      <div class="footer-col-links">
+        <a href="#">Rheumatology</a>
+        <a href="#">Neurology</a>
+        <a href="#">Gastroenterology</a>
+        <a href="#">Allergy &amp; immunology</a>
+        <a href="#">Weight management</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Patients</div>
+      <div class="footer-col-links">
+        <a href="/patients.html">New patients</a>
+        <a href="/patients.html#appointment">Request appointment</a>
+        <a href="/insurance.html">Insurance &amp; billing</a>
+        <a href="/patients.html#expect">What to expect</a>
+        <a href="/patients.html">Patient portal</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Providers</div>
+      <div class="footer-col-links">
+        <a href="/providers.html">For providers</a>
+        <a href="/providers.html#referral-form">Submit a referral</a>
+        <a href="/providers.html#specialties">Drug &amp; formulary list</a>
+        <a href="/about.html">Contact our team</a>
+        <a href="/about.html">About us</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-legal">© 2025 Hudson River Valley Medical PC · 400 Westage Business Center Dr, Suite 102A, Fishkill NY 12524</span>
+    <span class="footer-legal">Privacy policy · Accessibility · HIPAA notice</span>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      document.querySelectorAll('.faq-item.open').forEach(i => { if(i !== item) i.classList.remove('open'); });
+      item.classList.toggle('open');
+    });
+  });
+</script>
+</body>
+</html>

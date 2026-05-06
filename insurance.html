@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insurance & Billing | HV Infusion & Biologics – Fishkill, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --green:       #6ab04c;
+    --green-dark:  #4e8a34;
+    --green-light: #8fcc6e;
+    --teal:        #2eb8b8;
+    --teal-dark:   #1a9090;
+    --teal-light:  #55d0d0;
+    --navy:        #0d2233;
+    --navy2:       #122944;
+    --cream:       #f5f9f5;
+    --white:       #ffffff;
+    --gray:        #6b7a8d;
+    --gray-light:  #e8f0e8;
+    --border:      rgba(106,176,76,0.2);
+    --teal-border: rgba(46,184,184,0.2);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Nunito Sans', sans-serif; color: var(--navy); background: var(--white); }
+  a { text-decoration: none; color: inherit; }
+
+  /* UTILITY */
+  .btn-green { display: inline-block; background: var(--green); color: #fff; padding: 14px 30px; border-radius: 6px; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; transition: background .2s; border: none; cursor: pointer; }
+  .btn-green:hover { background: var(--green-dark); }
+  .btn-teal { display: inline-block; background: var(--teal); color: #fff; padding: 14px 30px; border-radius: 6px; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; transition: background .2s; border: none; cursor: pointer; }
+  .btn-teal:hover { background: var(--teal-dark); }
+  .btn-outline { display: inline-block; background: transparent; color: var(--green); padding: 13px 28px; border-radius: 6px; font-size: 14px; font-weight: 700; border: 2px solid var(--green); transition: background .2s, color .2s; }
+  .btn-outline:hover { background: var(--green); color: #fff; }
+  .btn-outline-white { display: inline-block; background: transparent; color: #fff; padding: 13px 28px; border-radius: 6px; font-size: 14px; font-weight: 700; border: 2px solid rgba(255,255,255,0.45); transition: border-color .2s; }
+  .btn-outline-white:hover { border-color: #fff; }
+  .tag { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 14px; }
+  .tag::before { content: ''; display: block; width: 24px; height: 2px; background: currentColor; border-radius: 1px; }
+  .tag.green { color: var(--green); }
+  .tag.teal  { color: var(--teal); }
+  .tag.white { color: rgba(255,255,255,0.7); }
+  .section-title { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 38px; line-height: 1.2; margin-bottom: 14px; }
+  .section-sub { font-size: 16px; color: var(--gray); line-height: 1.7; max-width: 560px; margin-bottom: 36px; }
+
+  /* NAV */
+  nav { background: var(--white); border-bottom: 1px solid var(--border); padding: 0 40px; height: 72px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+  .nav-logo { display: flex; align-items: center; }
+  .nav-brand { display: flex; flex-direction: column; gap: 1px; margin-left: 12px; }
+  .nav-brand-main { font-family: 'Nunito', sans-serif; font-size: 18px; font-weight: 700; color: var(--navy); line-height: 1; }
+  .nav-brand-main .hv  { color: var(--teal); }
+  .nav-brand-main .inf { color: var(--green); }
+  .nav-brand-main .bio { color: var(--teal); font-weight: 400; font-size: 14px; }
+  .nav-brand-sub { font-size: 9px; color: var(--gray); letter-spacing: 0.07em; }
+  .nav-links { display: flex; align-items: center; gap: 28px; }
+  .nav-links a { font-size: 13px; font-weight: 600; color: var(--navy); transition: color .15s; }
+  .nav-links a:hover { color: var(--teal); }
+  .nav-links a.active { color: var(--green); border-bottom: 2px solid var(--green); padding-bottom: 2px; }
+  .nav-links .nav-cta { background: var(--green); color: #fff; padding: 10px 22px; border-radius: 6px; font-weight: 700; transition: background .2s; }
+  .nav-links .nav-cta:hover { background: var(--green-dark); color: #fff; }
+  .nav-links .nav-refer { background: transparent; color: var(--teal); padding: 9px 20px; border-radius: 6px; border: 2px solid var(--teal); font-weight: 700; transition: background .2s, color .2s; }
+  .nav-links .nav-refer:hover { background: var(--teal); color: #fff; }
+
+  /* PAGE HERO */
+  .page-hero { background: var(--navy); padding: 72px 40px 80px; position: relative; overflow: hidden; }
+  .page-hero-accent { position: absolute; right: 0; top: 0; width: 40%; height: 100%; background: linear-gradient(135deg, rgba(106,176,76,0.07) 0%, rgba(46,184,184,0.04) 100%); border-left: 1px solid rgba(106,176,76,0.12); }
+  .hero-glow { position: absolute; bottom: -80px; right: 20%; width: 360px; height: 360px; border-radius: 50%; background: radial-gradient(circle, rgba(106,176,76,0.05) 0%, transparent 70%); }
+  .page-hero-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 340px; gap: 60px; align-items: center; }
+  .breadcrumb { font-size: 12px; color: rgba(255,255,255,0.35); margin-bottom: 16px; }
+  .breadcrumb a { color: var(--green-light); }
+  .breadcrumb span { margin: 0 8px; }
+  .page-hero h1 { font-family: 'Nunito', sans-serif; font-size: 46px; font-weight: 700; color: var(--white); line-height: 1.15; margin-bottom: 18px; }
+  .page-hero h1 em { font-style: italic; font-weight: 300; color: var(--teal-light); }
+  .page-hero-sub { font-size: 17px; color: rgba(255,255,255,0.55); line-height: 1.7; margin-bottom: 32px; max-width: 500px; }
+  .page-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+  /* Hero summary card */
+  .summary-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(106,176,76,0.25); border-radius: 14px; padding: 26px 22px; }
+  .summary-card-title { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--green-light); margin-bottom: 16px; }
+  .summary-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .summary-row:last-child { border-bottom: none; }
+  .summary-check { width: 22px; height: 22px; border-radius: 50%; background: rgba(106,176,76,0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 11px; color: var(--green-light); font-weight: 700; }
+  .summary-text { font-size: 13px; color: rgba(255,255,255,0.8); font-weight: 600; }
+
+  /* ANCHOR NAV */
+  .anchor-nav { background: var(--cream); border-bottom: 1px solid var(--border); padding: 0 40px; }
+  .anchor-nav-inner { max-width: 1140px; margin: 0 auto; display: flex; overflow-x: auto; }
+  .anchor-link { padding: 16px 24px; font-size: 13px; font-weight: 600; color: var(--gray); border-bottom: 2px solid transparent; white-space: nowrap; cursor: pointer; transition: color .15s, border-color .15s; }
+  .anchor-link:hover, .anchor-link.active { color: var(--green); border-color: var(--green); }
+
+  /* ACCEPTED PLANS */
+  .plans-section { padding: 80px 40px; background: var(--white); }
+  .plans-inner { max-width: 1140px; margin: 0 auto; }
+
+  .plans-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 44px; }
+
+  .plan-card {
+    border: 1.5px solid var(--border); border-radius: 14px;
+    padding: 28px 24px; position: relative; transition: border-color .2s, transform .15s;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .plan-card:hover { border-color: var(--green); transform: translateY(-2px); }
+  .plan-card.medicare { border-color: rgba(46,184,184,0.35); }
+  .plan-card.medicare:hover { border-color: var(--teal); }
+
+  .plan-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 4px 10px; border-radius: 20px; width: fit-content;
+  }
+  .badge-govt  { background: rgba(46,184,184,0.12); color: var(--teal-dark); }
+  .badge-comm  { background: rgba(106,176,76,0.12); color: var(--green-dark); }
+  .badge-more  { background: rgba(107,122,141,0.1); color: var(--gray); }
+
+  .plan-name { font-family: 'Nunito', sans-serif; font-size: 22px; font-weight: 700; color: var(--navy); line-height: 1.1; }
+  .plan-type { font-size: 12px; color: var(--gray); }
+  .plan-detail { font-size: 13px; color: var(--gray); line-height: 1.6; padding-top: 4px; border-top: 1px solid var(--border); margin-top: 4px; }
+  .plan-check { color: var(--green); font-weight: 700; margin-right: 6px; }
+  .plan-check.teal { color: var(--teal); }
+
+  .plan-card.coming-soon {
+    border-style: dashed; border-color: rgba(107,122,141,0.25);
+    background: var(--cream);
+  }
+  .plan-card.coming-soon:hover { border-color: var(--green); transform: none; }
+  .coming-label { font-size: 13px; color: var(--gray); line-height: 1.6; }
+
+  /* NOT SURE BANNER */
+  .not-sure { background: var(--cream); border: 1px solid var(--border); border-radius: 14px; padding: 28px 32px; margin-top: 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  .not-sure-left {}
+  .not-sure-title { font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .not-sure-sub { font-size: 14px; color: var(--gray); line-height: 1.6; }
+  .not-sure-actions { display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap; }
+
+  /* BILLING PROCESS */
+  .billing { padding: 80px 40px; background: var(--cream); }
+  .billing-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+  .billing-steps { display: flex; flex-direction: column; gap: 0; margin-top: 8px; }
+  .billing-step { display: flex; gap: 18px; padding-bottom: 28px; position: relative; }
+  .billing-step:not(:last-child)::after { content: ''; position: absolute; left: 17px; top: 42px; bottom: 0; width: 2px; background: var(--gray-light); }
+  .b-circle { width: 36px; height: 36px; border-radius: 50%; background: var(--green); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; position: relative; z-index: 1; }
+  .billing-step:nth-child(2) .b-circle,
+  .billing-step:nth-child(4) .b-circle { background: var(--teal); }
+  .b-title { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 5px; padding-top: 6px; }
+  .b-body { font-size: 13px; color: var(--gray); line-height: 1.65; }
+
+  /* Prior auth info */
+  .auth-box { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 28px 26px; }
+  .auth-box-title { font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .auth-box-sub { font-size: 14px; color: var(--gray); line-height: 1.6; margin-bottom: 20px; }
+  .auth-list { display: flex; flex-direction: column; gap: 12px; }
+  .auth-item { display: flex; gap: 12px; align-items: flex-start; }
+  .auth-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); flex-shrink: 0; margin-top: 5px; }
+  .auth-text { font-size: 13px; color: var(--navy); line-height: 1.55; }
+  .auth-text span { color: var(--gray); }
+  .auth-note { background: rgba(46,184,184,0.08); border-left: 3px solid var(--teal); border-radius: 0 8px 8px 0; padding: 14px 16px; margin-top: 20px; font-size: 13px; color: var(--navy); line-height: 1.6; }
+  .auth-note strong { color: var(--teal); }
+
+  /* COST SAVINGS */
+  .savings { padding: 80px 40px; background: var(--white); }
+  .savings-inner { max-width: 1140px; margin: 0 auto; }
+  .savings-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-top: 44px; }
+  .savings-card { border: 1px solid var(--border); border-radius: 14px; padding: 30px 26px; }
+  .savings-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--gray-light); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+  .savings-title { font-family: 'Nunito', sans-serif; font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .savings-body { font-size: 13px; color: var(--gray); line-height: 1.65; }
+  .savings-highlight { background: rgba(106,176,76,0.08); border: 1px solid var(--border); border-radius: 14px; padding: 30px 32px; margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+  .savings-stat-num { font-family: 'Nunito', sans-serif; font-size: 48px; font-weight: 700; color: var(--green); line-height: 1; margin-bottom: 6px; }
+  .savings-stat-label { font-size: 14px; color: var(--navy); font-weight: 600; margin-bottom: 6px; }
+  .savings-stat-sub { font-size: 12px; color: var(--gray); line-height: 1.5; }
+  .savings-source { font-size: 11px; color: var(--gray); margin-top: 8px; font-style: italic; }
+
+  /* FINANCIAL ASSISTANCE */
+  .assistance { padding: 80px 40px; background: var(--cream); }
+  .assistance-inner { max-width: 1140px; margin: 0 auto; }
+  .assistance-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 44px; }
+  .assist-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 28px 24px; }
+  .assist-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--gray-light); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+  .assist-title { font-family: 'Nunito', sans-serif; font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .assist-body { font-size: 13px; color: var(--gray); line-height: 1.65; margin-bottom: 16px; }
+  .assist-link { font-size: 13px; color: var(--teal); font-weight: 700; }
+
+  /* FAQ */
+  .faq { padding: 80px 40px; background: var(--white); }
+  .faq-inner { max-width: 800px; margin: 0 auto; }
+  .faq-list { display: flex; flex-direction: column; gap: 0; margin-top: 40px; border-top: 1px solid var(--border); }
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-q { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; cursor: pointer; gap: 16px; }
+  .faq-q-text { font-family: 'Nunito', sans-serif; font-size: 17px; font-weight: 700; color: var(--navy); }
+  .faq-icon { color: var(--green); font-size: 22px; flex-shrink: 0; transition: transform .2s; line-height: 1; }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+  .faq-a { font-size: 14px; color: var(--gray); line-height: 1.75; padding-bottom: 20px; display: none; max-width: 640px; }
+  .faq-item.open .faq-a { display: block; }
+
+  /* VERIFY CTA */
+  .verify-cta { background: var(--green); padding: 72px 40px; }
+  .verify-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: center; }
+  .verify-title { font-family: 'Nunito', sans-serif; font-size: 38px; font-weight: 700; color: var(--white); line-height: 1.2; margin-bottom: 12px; }
+  .verify-sub { font-size: 16px; color: rgba(255,255,255,0.75); line-height: 1.7; margin-bottom: 28px; }
+  .verify-bullets { display: flex; flex-direction: column; gap: 10px; }
+  .verify-bullet { display: flex; align-items: center; gap: 10px; font-size: 14px; color: rgba(255,255,255,0.8); }
+  .verify-bullet::before { content: '✓'; color: #fff; font-weight: 700; flex-shrink: 0; }
+  .verify-form { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 14px; padding: 28px 24px; }
+  .verify-form-title { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 16px; }
+  .form-group { margin-bottom: 12px; }
+  .form-group label { display: block; font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.6); margin-bottom: 5px; letter-spacing: 0.06em; text-transform: uppercase; }
+  .form-group input, .form-group select { width: 100%; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: 6px; padding: 10px 14px; font-size: 14px; color: var(--white); font-family: 'Nunito Sans', sans-serif; outline: none; transition: border-color .2s; }
+  .form-group input::placeholder { color: rgba(255,255,255,0.4); }
+  .form-group input:focus, .form-group select:focus { border-color: rgba(255,255,255,0.6); }
+  .form-group select { color: rgba(255,255,255,0.7); }
+  .form-group select option { background: var(--navy); color: #fff; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .btn-submit { width: 100%; background: var(--white); color: var(--green); border: none; border-radius: 6px; padding: 13px; font-size: 14px; font-weight: 700; cursor: pointer; transition: opacity .2s; margin-top: 6px; font-family: 'Nunito Sans', sans-serif; letter-spacing: 0.04em; }
+  .btn-submit:hover { opacity: 0.9; }
+  .verify-note { font-size: 11px; color: rgba(255,255,255,0.45); text-align: center; margin-top: 10px; line-height: 1.5; }
+
+  /* FOOTER */
+  footer { background: var(--navy); padding: 56px 40px 28px; }
+  .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; max-width: 1140px; margin: 0 auto 40px; }
+  .footer-brand-name { font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+  .footer-brand-name .hv  { color: var(--teal); }
+  .footer-brand-name .inf { color: var(--green); }
+  .footer-brand-sub { font-size: 10px; color: rgba(255,255,255,0.35); letter-spacing: 0.07em; margin-bottom: 14px; }
+  .footer-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.7; margin-bottom: 14px; }
+  .footer-contact { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.8; }
+  .footer-contact a { color: var(--teal-light); }
+  .footer-col-title { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-light); font-weight: 700; margin-bottom: 16px; }
+  .footer-col-links { display: flex; flex-direction: column; gap: 9px; }
+  .footer-col-links a { font-size: 13px; color: rgba(255,255,255,0.45); transition: color .15s; }
+  .footer-col-links a:hover { color: var(--white); }
+  .footer-bottom { max-width: 1140px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.07); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .footer-legal { font-size: 11px; color: rgba(255,255,255,0.22); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+      <path d="M20 4 A16 16 0 1 0 34 12" stroke="#6ab04c" stroke-width="2.5" stroke-linecap="round"/>
+      <g transform="translate(30.5,8) rotate(35)">
+        <ellipse cx="0" cy="0" rx="4" ry="6" fill="#2eb8b8"/>
+        <line x1="0" y1="-5" x2="0" y2="5" stroke="#1a9090" stroke-width="0.8"/>
+      </g>
+      <text x="20" y="26" font-family="'Nunito Sans',sans-serif" font-size="11" font-weight="700" fill="#2eb8b8" text-anchor="middle">HV</text>
+    </svg>
+    <div class="nav-brand">
+      <div class="nav-brand-main"><span class="hv">HV</span> <span class="inf">Infusion</span> <span class="bio">&amp; Biologics</span></div>
+      <div class="nav-brand-sub">Hudson River Valley Medical PC</div>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="/conditions.html">Conditions</a>
+    <a href="/patients.html">For patients</a>
+    <a href="/providers.html">For providers</a>
+    <a href="/insurance.html" class="active">Insurance</a>
+    <a href="/about.html">About</a>
+    <a href="/providers.html#referral-form" class="nav-refer">Refer a patient</a>
+    <a href="/patients.html#appointment" class="nav-cta">Request appointment</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-accent"></div>
+  <div class="hero-glow"></div>
+  <div class="page-hero-inner">
+    <div>
+      <div class="breadcrumb"><a href="/">Home</a> <span>›</span> Insurance &amp; billing</div>
+      <div class="tag green">Insurance &amp; billing</div>
+      <h1>We handle the<br>insurance so you can<br>focus on <em>healing</em></h1>
+      <p class="page-hero-sub">We accept Medicare, Medicaid, and most major commercial plans. Our billing team verifies your coverage, obtains prior authorization, and explains your costs before your first visit — no surprises.</p>
+      <div class="page-hero-actions">
+        <a href="#verify" class="btn-green">Verify my insurance</a>
+        <a href="#plans" class="btn-outline-white">View accepted plans</a>
+      </div>
+    </div>
+    <div class="summary-card">
+      <div class="summary-card-title">What we do for you</div>
+      <div class="summary-row">
+        <div class="summary-check">✓</div>
+        <div class="summary-text">Verify your benefits before your visit</div>
+      </div>
+      <div class="summary-row">
+        <div class="summary-check">✓</div>
+        <div class="summary-text">Obtain prior authorization on your behalf</div>
+      </div>
+      <div class="summary-row">
+        <div class="summary-check">✓</div>
+        <div class="summary-text">Give you a clear cost estimate upfront</div>
+      </div>
+      <div class="summary-row">
+        <div class="summary-check">✓</div>
+        <div class="summary-text">Apply for manufacturer co-pay assistance</div>
+      </div>
+      <div class="summary-row">
+        <div class="summary-check">✓</div>
+        <div class="summary-text">Bill your insurance directly — you pay the rest</div>
+      </div>
+      <div class="summary-row">
+        <div class="summary-check">✓</div>
+        <div class="summary-text">Answer billing questions Monday–Friday</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANCHOR NAV -->
+<div class="anchor-nav">
+  <div class="anchor-nav-inner">
+    <a href="#plans"      class="anchor-link active">Accepted plans</a>
+    <a href="#billing"    class="anchor-link">How billing works</a>
+    <a href="#savings"    class="anchor-link">Cost savings</a>
+    <a href="#assistance" class="anchor-link">Financial assistance</a>
+    <a href="#faq"        class="anchor-link">FAQs</a>
+    <a href="#verify"     class="anchor-link">Verify my insurance</a>
+  </div>
+</div>
+
+<!-- ACCEPTED PLANS -->
+<section class="plans-section" id="plans">
+  <div class="plans-inner">
+    <div class="tag green">Accepted insurance plans</div>
+    <h2 class="section-title">Insurance plans we currently accept</h2>
+    <p class="section-sub">We participate with the following insurance programs. We are actively credentialing with additional carriers — check back as our network grows.</p>
+
+    <div class="plans-grid">
+
+      <!-- Medicare -->
+      <div class="plan-card medicare">
+        <div class="plan-badge badge-govt">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Government
+        </div>
+        <div class="plan-name">Medicare</div>
+        <div class="plan-type">Federal health insurance program</div>
+        <div class="plan-detail">
+          <span class="plan-check teal">✓</span> Medicare Part B covers most infusion drugs administered in our center<br>
+          <span class="plan-check teal">✓</span> We bill Medicare directly and handle all claim submissions<br>
+          <span class="plan-check teal">✓</span> Supplemental / Medigap plans accepted alongside Medicare
+        </div>
+      </div>
+
+      <!-- Railroad Medicare -->
+      <div class="plan-card medicare">
+        <div class="plan-badge badge-govt">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Government
+        </div>
+        <div class="plan-name">Railroad Medicare</div>
+        <div class="plan-type">Administered by Palmetto GBA</div>
+        <div class="plan-detail">
+          <span class="plan-check teal">✓</span> Available to retired railroad workers and dependents<br>
+          <span class="plan-check teal">✓</span> Same Part B infusion coverage as traditional Medicare<br>
+          <span class="plan-check teal">✓</span> We handle Railroad Medicare billing directly
+        </div>
+      </div>
+
+      <!-- NY Medicaid -->
+      <div class="plan-card medicare">
+        <div class="plan-badge badge-govt">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Government
+        </div>
+        <div class="plan-name">NY Medicaid</div>
+        <div class="plan-type">New York State Medicaid program</div>
+        <div class="plan-detail">
+          <span class="plan-check teal">✓</span> New York State Medicaid fee-for-service accepted<br>
+          <span class="plan-check teal">✓</span> Medicaid managed care plans — verify by plan<br>
+          <span class="plan-check teal">✓</span> Prior authorization handled by our team
+        </div>
+      </div>
+
+      <!-- Cigna -->
+      <div class="plan-card">
+        <div class="plan-badge badge-comm">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          Commercial
+        </div>
+        <div class="plan-name">Cigna</div>
+        <div class="plan-type">Commercial &amp; employer-sponsored plans</div>
+        <div class="plan-detail">
+          <span class="plan-check">✓</span> Cigna PPO and HMO plans accepted<br>
+          <span class="plan-check">✓</span> Cigna Open Access Plus accepted<br>
+          <span class="plan-check">✓</span> We verify your specific Cigna plan benefits at intake
+        </div>
+      </div>
+
+      <!-- Humana -->
+      <div class="plan-card">
+        <div class="plan-badge badge-comm">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          Commercial
+        </div>
+        <div class="plan-name">Humana</div>
+        <div class="plan-type">Commercial &amp; Medicare Advantage</div>
+        <div class="plan-detail">
+          <span class="plan-check">✓</span> Humana commercial plans accepted<br>
+          <span class="plan-check">✓</span> Humana Medicare Advantage plans accepted<br>
+          <span class="plan-check">✓</span> Contact us to confirm your specific Humana plan
+        </div>
+      </div>
+
+      <!-- CDPHP -->
+      <div class="plan-card">
+        <div class="plan-badge badge-comm">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          Commercial
+        </div>
+        <div class="plan-name">CDPHP</div>
+        <div class="plan-type">Capital District Physicians' Health Plan</div>
+        <div class="plan-detail">
+          <span class="plan-check">✓</span> CDPHP PPO and HMO plans accepted<br>
+          <span class="plan-check">✓</span> Capital Region and Hudson Valley members welcome<br>
+          <span class="plan-check">✓</span> Prior authorization managed by our billing team
+        </div>
+      </div>
+
+      <!-- Emblem Health -->
+      <div class="plan-card">
+        <div class="plan-badge badge-comm">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          Commercial
+        </div>
+        <div class="plan-name">Emblem Health</div>
+        <div class="plan-type">GHI &amp; HIP plans</div>
+        <div class="plan-detail">
+          <span class="plan-check">✓</span> EmblemHealth GHI and HIP plans accepted<br>
+          <span class="plan-check">✓</span> Emblem Medicare Advantage plans — verify at intake<br>
+          <span class="plan-check">✓</span> We confirm your Emblem benefits before your visit
+        </div>
+      </div>
+
+      <!-- Coming soon card -->
+      <div class="plan-card coming-soon" style="grid-column: span 2;">
+        <div class="plan-badge badge-more">More coming soon</div>
+        <div class="plan-name" style="color: var(--gray); font-size: 18px;">Actively adding insurance partners</div>
+        <div class="coming-label">We are in the process of credentialing with additional commercial carriers including Aetna, United Healthcare, Blue Cross Blue Shield, MVP Health Care, and others. If you don't see your plan listed, please contact us — we may already be in-network or can help you understand your out-of-network benefits.</div>
+      </div>
+
+    </div>
+
+    <!-- Not sure banner -->
+    <div class="not-sure">
+      <div class="not-sure-left">
+        <div class="not-sure-title">Not sure if we accept your plan?</div>
+        <div class="not-sure-sub">Call our billing team and we'll verify your coverage within one business day — at no charge and with no obligation to schedule.</div>
+      </div>
+      <div class="not-sure-actions">
+        <a href="tel:8458483626" class="btn-green">Call (845) 848-3626</a>
+        <a href="#verify" class="btn-outline">Submit online</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BILLING PROCESS -->
+<section class="billing" id="billing">
+  <div class="billing-inner">
+    <div>
+      <div class="tag green">How billing works</div>
+      <h2 class="section-title">No surprises.<br>We walk you<br>through it all.</h2>
+      <p class="section-sub" style="font-size:15px;">Before your first infusion, we make sure you fully understand your coverage and any out-of-pocket costs. Our billing team is available Monday–Friday to answer questions.</p>
+      <div style="margin-top: 8px; display: flex; flex-direction: column; gap: 10px;">
+        <a href="tel:8458483626" class="btn-green" style="width: fit-content;">Call our billing team</a>
+        <p style="font-size:12px; color:var(--gray);">Monday–Friday · 8am–5pm · (845) 848-3626</p>
+      </div>
+    </div>
+    <div>
+      <div class="billing-steps">
+        <div class="billing-step">
+          <div class="b-circle">1</div>
+          <div>
+            <div class="b-title">Benefits verification</div>
+            <div class="b-body">As soon as we receive your referral, we contact your insurance company to confirm your infusion benefits — including your deductible status, co-pay, co-insurance, and any out-of-pocket maximum.</div>
+          </div>
+        </div>
+        <div class="billing-step">
+          <div class="b-circle">2</div>
+          <div>
+            <div class="b-title">Prior authorization</div>
+            <div class="b-body">Most biologic medications require prior authorization before your insurer will cover them. We obtain this on your behalf, track the status, and notify you and your physician when it's approved.</div>
+          </div>
+        </div>
+        <div class="billing-step">
+          <div class="b-circle">3</div>
+          <div>
+            <div class="b-title">Clear cost estimate</div>
+            <div class="b-body">Before your first visit, we contact you with a plain-English explanation of what your insurance will cover and what your estimated out-of-pocket cost will be. No guessing, no billing shock.</div>
+          </div>
+        </div>
+        <div class="billing-step">
+          <div class="b-circle">4</div>
+          <div>
+            <div class="b-title">Medication coordination</div>
+            <div class="b-body">Your infusion medication is ordered through a specialty pharmacy and delivered directly to our center. In many cases we can coordinate manufacturer co-pay assistance to reduce your cost further.</div>
+          </div>
+        </div>
+        <div class="billing-step" style="padding-bottom:0;">
+          <div class="b-circle">5</div>
+          <div>
+            <div class="b-title">Claim submission &amp; follow-up</div>
+            <div class="b-body">After your infusion, we submit all claims to your insurance directly. If there are any claim issues or denials, our billing team handles the appeals process — you won't need to fight with your insurer.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prior auth info box -->
+  <div style="max-width:1140px; margin: 48px auto 0;">
+    <div class="auth-box">
+      <div class="auth-box-title">Understanding prior authorization</div>
+      <div class="auth-box-sub">Prior authorization (PA) is a requirement from your insurance company that a medication is medically necessary before they'll cover it. It's common for biologics — and we handle the entire process for you.</div>
+      <div class="auth-list">
+        <div class="auth-item">
+          <div class="auth-dot"></div>
+          <div class="auth-text">We submit the prior auth request with your physician's clinical documentation. <span>You don't need to do anything.</span></div>
+        </div>
+        <div class="auth-item">
+          <div class="auth-dot"></div>
+          <div class="auth-text">Most authorizations are approved within 3–10 business days. <span>We notify you and your doctor immediately when approved.</span></div>
+        </div>
+        <div class="auth-item">
+          <div class="auth-dot"></div>
+          <div class="auth-text">If your insurer denies the auth, we file an appeal with supporting clinical evidence. <span>We do not give up easily.</span></div>
+        </div>
+        <div class="auth-item">
+          <div class="auth-dot"></div>
+          <div class="auth-text">We track auth renewal dates for ongoing treatment and initiate renewals proactively. <span>Your treatment never lapses due to an expired auth.</span></div>
+        </div>
+      </div>
+      <div class="auth-note"><strong>Have questions about your prior auth?</strong> Call our team at (845) 848-3626 and we'll give you a status update on any active authorization.</div>
+    </div>
+  </div>
+</section>
+
+<!-- COST SAVINGS -->
+<section class="savings" id="savings">
+  <div class="savings-inner">
+    <div class="tag green">Cost savings</div>
+    <h2 class="section-title">Why infusion here costs<br>less than at a hospital</h2>
+    <p class="section-sub">Ambulatory infusion centers — like ours — are consistently less expensive than hospital outpatient infusion departments for the same medications and the same care.</p>
+    <div class="savings-grid">
+      <div class="savings-card">
+        <div class="savings-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2" stroke-linecap="round">
+            <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+        <div class="savings-title">Lower facility fees</div>
+        <div class="savings-body">Hospitals charge a facility fee on top of the drug cost — sometimes thousands of dollars per visit. As a freestanding ambulatory center we do not charge hospital facility fees, which means lower bills for you and your insurer.</div>
+      </div>
+      <div class="savings-card">
+        <div class="savings-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2eb8b8" stroke-width="2" stroke-linecap="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div class="savings-title">Insurer-preferred setting</div>
+        <div class="savings-body">Many insurance plans now direct members to ambulatory infusion centers for biologic therapy — because it costs them less too. This means better coverage rates and lower cost-sharing for you in many cases.</div>
+      </div>
+      <div class="savings-card">
+        <div class="savings-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2" stroke-linecap="round">
+            <rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+          </svg>
+        </div>
+        <div class="savings-title">Manufacturer assistance</div>
+        <div class="savings-body">Most biologic manufacturers offer co-pay assistance or patient support programs that can dramatically reduce your out-of-pocket cost — sometimes to $0. We identify and apply for these programs on your behalf.</div>
+      </div>
+    </div>
+    <div class="savings-highlight">
+      <div>
+        <div class="savings-stat-num">40–60%</div>
+        <div class="savings-stat-label">Lower cost vs. hospital outpatient infusion</div>
+        <div class="savings-stat-sub">Typical savings for the same biologic therapy administered at an ambulatory infusion center compared to a hospital outpatient setting.</div>
+        <div class="savings-source">Source: AMIA &amp; specialty pharmacy industry research</div>
+      </div>
+      <div>
+        <p style="font-size:15px; color:var(--navy); line-height:1.7; margin-bottom:16px;">The same nurse. The same medication. The same clinical expertise. A fraction of the cost. That's the ambulatory infusion advantage.</p>
+        <a href="#verify" class="btn-green">Check my coverage</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINANCIAL ASSISTANCE -->
+<section class="assistance" id="assistance">
+  <div class="assistance-inner">
+    <div class="tag green">Financial assistance programs</div>
+    <h2 class="section-title">Help paying for<br>your infusion therapy</h2>
+    <p class="section-sub">Cost should never be a barrier to getting the treatment you need. We work with several programs to help reduce your out-of-pocket costs.</p>
+    <div class="assistance-grid">
+
+      <div class="assist-card">
+        <div class="assist-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2" stroke-linecap="round">
+            <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+        <div class="assist-title">Manufacturer co-pay assistance</div>
+        <div class="assist-body">Most major biologic manufacturers — including those making Remicade, Entyvio, Tysabri, Ocrevus, Orencia, and others — offer co-pay cards or assistance programs that can reduce your cost to as little as $0 per infusion. We identify programs for your specific medication and apply on your behalf.</div>
+        <div class="assist-link">We apply for this at no cost to you →</div>
+      </div>
+
+      <div class="assist-card">
+        <div class="assist-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2eb8b8" stroke-width="2" stroke-linecap="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <div class="assist-title">Patient assistance programs (PAP)</div>
+        <div class="assist-body">If you are uninsured or underinsured, many drug manufacturers offer Patient Assistance Programs that provide medication at little or no cost based on financial need. Our team can help determine your eligibility and guide you through the application process.</div>
+        <div class="assist-link">Ask our billing team about eligibility →</div>
+      </div>
+
+      <div class="assist-card">
+        <div class="assist-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2" stroke-linecap="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div class="assist-title">Medicare extra help / LIS</div>
+        <div class="assist-body">If you have Medicare and have limited income and resources, you may qualify for Extra Help — a federal program that helps pay Medicare drug costs. Our billing team can help you understand if you may be eligible and how to apply.</div>
+        <div class="assist-link">Learn more about Medicare Extra Help →</div>
+      </div>
+
+      <div class="assist-card">
+        <div class="assist-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2eb8b8" stroke-width="2" stroke-linecap="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <div class="assist-title">Flexible payment options</div>
+        <div class="assist-body">For any remaining balance after insurance and assistance programs, we offer flexible payment arrangements. We will never let billing be a reason treatment is delayed or discontinued. Please speak with our billing team to discuss your options.</div>
+        <div class="assist-link">Talk to our billing team →</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div class="tag green">Insurance FAQs</div>
+    <h2 class="section-title">Common billing &amp; insurance questions</h2>
+    <div class="faq-list">
+
+      <div class="faq-item open">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-text">How do I know if my insurance covers infusion at your center?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">The best way is to contact us directly — either by calling (845) 848-3626 or submitting our insurance verification form below. Our billing team will contact your insurance company on your behalf and provide you with a clear summary of your benefits within one business day. There is no cost or commitment required to verify your coverage.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-text">What is prior authorization and how long does it take?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Prior authorization is an approval from your insurance company confirming that a medication is medically necessary and covered under your plan. It's required for most biologic medications. We handle the entire prior auth process for you — submitting the request, providing clinical documentation from your physician, and following up with your insurer. Most authorizations are approved within 3–10 business days, though some plans may take longer. We will keep you informed throughout.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-text">Will I owe anything out of pocket?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Your out-of-pocket cost depends on your specific insurance plan — your deductible, co-pay, and co-insurance amounts. We'll give you a clear estimate before your first visit. In many cases, manufacturer co-pay assistance programs can dramatically reduce or eliminate your out-of-pocket cost. We apply for these programs on your behalf at no charge. We will never start treatment without making sure you understand your financial responsibility first.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-text">My insurance wasn't listed — can you still see me?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Possibly, yes. We are actively credentialing with additional commercial carriers and may already be in-network with your plan. We are also able to work with some plans on an out-of-network basis. Please call us at (845) 848-3626 or submit your information below and we'll check your specific plan. Don't assume we can't see you before checking with us — you may be pleasantly surprised.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-text">What if my prior authorization is denied?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Prior auth denials happen, but they are often overturned on appeal. Our billing team will file a formal appeal with supporting clinical documentation from your physician. We advocate strongly on your behalf. If the appeal is unsuccessful, we will explore alternative options — including peer-to-peer review requests, exception requests, and manufacturer assistance programs — before giving up.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-text">How does Medicare cover infusion therapy at your center?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Medicare Part B covers most infusion drugs administered at ambulatory infusion centers when they are considered medically necessary. Generally, Medicare pays 80% of the approved amount after your Part B deductible is met. Your Medicare Supplement (Medigap) plan typically covers the remaining 20%. If you have a Medicare Advantage plan, your coverage depends on your specific plan — we will verify this for you at no charge.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          <span class="faq-q-text">Can I use my HSA or FSA to pay for infusion costs?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">Yes. Health Savings Account (HSA) and Flexible Spending Account (FSA) funds can be used to pay for qualified medical expenses including infusion therapy co-pays, deductibles, and co-insurance. We accept HSA and FSA cards as a form of payment.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VERIFY CTA -->
+<section class="verify-cta" id="verify">
+  <div class="verify-inner">
+    <div>
+      <div class="tag white">Verify my insurance</div>
+      <h2 class="verify-title">Let us check your coverage — free, fast, no commitment</h2>
+      <p class="verify-sub">Submit your information and our billing team will verify your benefits and contact you within one business day with a clear explanation of your coverage.</p>
+      <div class="verify-bullets">
+        <div class="verify-bullet">No cost to verify your insurance</div>
+        <div class="verify-bullet">Response within one business day</div>
+        <div class="verify-bullet">Clear explanation of your benefits &amp; costs</div>
+        <div class="verify-bullet">Or call us: (845) 848-3626, Mon–Fri 8am–5pm</div>
+      </div>
+    </div>
+    <div class="verify-form">
+      <div class="verify-form-title">Insurance verification request</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>First name</label>
+          <input type="text" placeholder="Jane">
+        </div>
+        <div class="form-group">
+          <label>Last name</label>
+          <input type="text" placeholder="Smith">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Phone number</label>
+        <input type="tel" placeholder="(845) 000-0000">
+      </div>
+      <div class="form-group">
+        <label>Date of birth</label>
+        <input type="date">
+      </div>
+      <div class="form-group">
+        <label>Insurance plan</label>
+        <select>
+          <option value="">Select your plan...</option>
+          <option>Medicare</option>
+          <option>Railroad Medicare</option>
+          <option>NY Medicaid</option>
+          <option>Cigna</option>
+          <option>Humana</option>
+          <option>CDPHP</option>
+          <option>Emblem Health</option>
+          <option>Other / Not listed</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Member ID (if known)</label>
+        <input type="text" placeholder="From the front of your insurance card">
+      </div>
+      <button class="btn-submit">Submit verification request</button>
+      <div class="verify-note">Your information is transmitted securely and handled in compliance with HIPAA. We will never share your information with third parties.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name"><span class="hv">HV</span> <span class="inf">Infusion</span> <span style="color:var(--teal); font-weight:400;">&amp; Biologics</span></div>
+      <div class="footer-brand-sub">Hudson River Valley Medical PC</div>
+      <p class="footer-desc">Advanced biologic and specialty infusion therapy in a comfortable, patient-centered environment — serving Fishkill, Dutchess County, and the greater Hudson Valley.</p>
+      <div class="footer-contact">
+        <div>400 Westage Business Center Dr, Suite 102A, Fishkill NY 12524</div>
+        <div><a href="tel:8458483626">(845) 848-3626</a></div>
+        <div>Mon–Fri 8am–6pm · Sat 9am–3pm · Sun by appt</div>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Conditions</div>
+      <div class="footer-col-links">
+        <a href="#">Rheumatology</a>
+        <a href="#">Neurology</a>
+        <a href="#">Gastroenterology</a>
+        <a href="#">Allergy &amp; immunology</a>
+        <a href="#">Weight management</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Patients</div>
+      <div class="footer-col-links">
+        <a href="/patients.html">New patients</a>
+        <a href="/patients.html#appointment">Request appointment</a>
+        <a href="/insurance.html">Insurance &amp; billing</a>
+        <a href="/patients.html#expect">What to expect</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Providers</div>
+      <div class="footer-col-links">
+        <a href="/providers.html">For providers</a>
+        <a href="/providers.html#referral-form">Submit a referral</a>
+        <a href="/providers.html#specialties">Drug &amp; formulary list</a>
+        <a href="/about.html">Contact our team</a>
+        <a href="/about.html">About us</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-legal">© 2025 Hudson River Valley Medical PC · 400 Westage Business Center Dr, Suite 102A, Fishkill NY 12524</span>
+    <span class="footer-legal">Privacy policy · Accessibility · HIPAA notice</span>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      document.querySelectorAll('.faq-item.open').forEach(i => { if(i !== item) i.classList.remove('open'); });
+      item.classList.toggle('open');
+    });
+  });
+</script>
+</body>
+</html>

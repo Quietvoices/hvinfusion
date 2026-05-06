@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conditions Treated | HV Infusion & Biologics – Fishkill, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --green:       #6ab04c;
+    --green-dark:  #4e8a34;
+    --green-light: #8fcc6e;
+    --teal:        #2eb8b8;
+    --teal-dark:   #1a9090;
+    --teal-light:  #55d0d0;
+    --navy:        #0d2233;
+    --navy2:       #122944;
+    --cream:       #f5f9f5;
+    --white:       #ffffff;
+    --gray:        #6b7a8d;
+    --gray-light:  #e8f0e8;
+    --border:      rgba(106,176,76,0.2);
+    --teal-border: rgba(46,184,184,0.2);
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Nunito Sans', sans-serif; color: var(--navy); background: var(--white); }
+  a { text-decoration: none; color: inherit; }
+
+  /* UTILITY */
+  .btn-green { display: inline-block; background: var(--green); color: #fff; padding: 14px 30px; border-radius: 6px; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; transition: background .2s; border: none; cursor: pointer; }
+  .btn-green:hover { background: var(--green-dark); }
+  .btn-teal { display: inline-block; background: var(--teal); color: #fff; padding: 14px 30px; border-radius: 6px; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; transition: background .2s; border: none; cursor: pointer; }
+  .btn-teal:hover { background: var(--teal-dark); }
+  .btn-outline-white { display: inline-block; background: transparent; color: #fff; padding: 13px 28px; border-radius: 6px; font-size: 14px; font-weight: 700; border: 2px solid rgba(255,255,255,0.45); transition: border-color .2s; }
+  .btn-outline-white:hover { border-color: #fff; }
+  .tag { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 14px; }
+  .tag::before { content: ''; display: block; width: 24px; height: 2px; background: currentColor; border-radius: 1px; }
+  .tag.green { color: var(--green); }
+  .tag.teal  { color: var(--teal); }
+  .tag.white { color: rgba(255,255,255,0.7); }
+  .section-title { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 38px; line-height: 1.2; margin-bottom: 16px; }
+  .section-sub { font-size: 16px; color: var(--gray); line-height: 1.75; max-width: 600px; margin-bottom: 36px; }
+
+  /* NAV */
+  nav { background: var(--white); border-bottom: 1px solid var(--border); padding: 0 40px; height: 72px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+  .nav-logo { display: flex; align-items: center; }
+  .nav-brand { display: flex; flex-direction: column; gap: 1px; margin-left: 12px; }
+  .nav-brand-main { font-family: 'Nunito', sans-serif; font-size: 18px; font-weight: 700; color: var(--navy); line-height: 1; }
+  .nav-brand-main .hv  { color: var(--teal); }
+  .nav-brand-main .inf { color: var(--green); }
+  .nav-brand-main .bio { color: var(--teal); font-weight: 400; font-size: 14px; }
+  .nav-brand-sub { font-size: 9px; color: var(--gray); letter-spacing: 0.07em; }
+  .nav-links { display: flex; align-items: center; gap: 28px; }
+  .nav-links a { font-size: 13px; font-weight: 600; color: var(--navy); transition: color .15s; }
+  .nav-links a:hover { color: var(--teal); }
+  .nav-links a.active { color: var(--green); border-bottom: 2px solid var(--green); padding-bottom: 2px; }
+  .nav-links .nav-cta { background: var(--green); color: #fff; padding: 10px 22px; border-radius: 6px; font-weight: 700; transition: background .2s; }
+  .nav-links .nav-cta:hover { background: var(--green-dark); color: #fff; }
+  .nav-links .nav-refer { background: transparent; color: var(--teal); padding: 9px 20px; border-radius: 6px; border: 2px solid var(--teal); font-weight: 700; transition: background .2s, color .2s; }
+  .nav-links .nav-refer:hover { background: var(--teal); color: #fff; }
+
+  /* SPECIALTY NAV TABS */
+  .specialty-nav { background: var(--navy); padding: 0 40px; border-bottom: 1px solid rgba(255,255,255,0.06); position: sticky; top: 72px; z-index: 90; }
+  .specialty-nav-inner { max-width: 1140px; margin: 0 auto; display: flex; gap: 0; overflow-x: auto; }
+  .spec-tab { padding: 18px 26px; font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.45); border-bottom: 3px solid transparent; white-space: nowrap; cursor: pointer; transition: color .15s, border-color .15s; display: flex; align-items: center; gap: 8px; }
+  .spec-tab:hover { color: rgba(255,255,255,0.8); }
+  .spec-tab.active { color: var(--green-light); border-color: var(--green); }
+  .spec-tab-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex-shrink: 0; }
+
+  /* CONDITION PANELS */
+  .condition-panel { display: none; }
+  .condition-panel.active { display: block; }
+
+  /* HERO */
+  .cond-hero { background: var(--navy); padding: 72px 40px 80px; position: relative; overflow: hidden; }
+  .hero-accent { position: absolute; right: 0; top: 0; width: 40%; height: 100%; border-left: 1px solid rgba(106,176,76,0.1); }
+  .hero-glow { position: absolute; bottom: -60px; left: -40px; width: 340px; height: 340px; border-radius: 50%; background: radial-gradient(circle, rgba(46,184,184,0.06) 0%, transparent 70%); }
+  .cond-hero-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 360px; gap: 60px; align-items: center; }
+  .breadcrumb { font-size: 12px; color: rgba(255,255,255,0.35); margin-bottom: 14px; }
+  .breadcrumb a { color: var(--green-light); }
+  .breadcrumb span { margin: 0 8px; }
+  .cond-hero h1 { font-family: 'Nunito', sans-serif; font-size: 46px; font-weight: 700; color: var(--white); line-height: 1.15; margin-bottom: 18px; }
+  .cond-hero h1 em { font-style: italic; font-weight: 300; color: var(--teal-light); }
+  .cond-hero-sub { font-size: 17px; color: rgba(255,255,255,0.55); line-height: 1.75; margin-bottom: 32px; max-width: 500px; }
+  .cond-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+  /* Drug card */
+  .drug-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(106,176,76,0.25); border-radius: 14px; padding: 26px 22px; }
+  .drug-card-title { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--green-light); margin-bottom: 14px; }
+  .drug-list { display: flex; flex-direction: column; gap: 8px; }
+  .drug-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 10px 14px; }
+  .drug-name { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 2px; }
+  .drug-generic { font-size: 11px; color: rgba(255,255,255,0.4); }
+
+  /* OVERVIEW */
+  .cond-overview { padding: 80px 40px; background: var(--white); }
+  .cond-overview-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .overview-body { font-size: 16px; color: var(--gray); line-height: 1.8; margin-bottom: 18px; }
+  .overview-body strong { color: var(--navy); }
+  .overview-pull { font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 300; font-style: italic; color: var(--navy); line-height: 1.5; border-left: 3px solid var(--green); padding-left: 20px; margin: 24px 0; }
+  .conditions-list-box { background: var(--cream); border: 1px solid var(--border); border-radius: 14px; padding: 28px 26px; }
+  .conditions-list-title { font-family: 'Nunito', sans-serif; font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 16px; }
+  .conditions-list { display: flex; flex-direction: column; gap: 10px; }
+  .cond-item { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--navy); line-height: 1.5; }
+  .cond-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--green); flex-shrink: 0; margin-top: 5px; }
+  .cond-dot.teal { background: var(--teal); }
+
+  /* MEDICATIONS */
+  .cond-meds { padding: 80px 40px; background: var(--cream); }
+  .cond-meds-inner { max-width: 1140px; margin: 0 auto; }
+  .meds-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 44px; }
+  .med-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 26px 22px; transition: border-color .2s, transform .15s; position: relative; overflow: hidden; }
+  .med-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--green); }
+  .med-card.teal-accent::before { background: var(--teal); }
+  .med-card:hover { border-color: var(--green); transform: translateY(-2px); }
+  .med-card.teal-accent:hover { border-color: var(--teal); }
+  .med-brand { font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+  .med-generic { font-size: 12px; color: var(--gray); margin-bottom: 12px; font-style: italic; }
+  .med-use { font-size: 13px; color: var(--navy); line-height: 1.6; margin-bottom: 12px; }
+  .med-detail { font-size: 12px; color: var(--gray); line-height: 1.6; padding-top: 12px; border-top: 1px solid var(--border); }
+
+  /* HOW WE ADMINISTER */
+  .cond-admin { padding: 80px 40px; background: var(--white); }
+  .cond-admin-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 420px 1fr; gap: 72px; align-items: start; }
+  .admin-steps { display: flex; flex-direction: column; gap: 0; }
+  .admin-step { display: flex; gap: 18px; padding-bottom: 26px; position: relative; }
+  .admin-step:not(:last-child)::after { content: ''; position: absolute; left: 17px; top: 42px; bottom: 0; width: 2px; background: var(--gray-light); }
+  .admin-circle { width: 36px; height: 36px; border-radius: 50%; background: var(--green); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; position: relative; z-index: 1; }
+  .admin-step:nth-child(even) .admin-circle { background: var(--teal); }
+  .admin-title { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; padding-top: 6px; }
+  .admin-body { font-size: 13px; color: var(--gray); line-height: 1.65; }
+  .admin-info-cards { display: flex; flex-direction: column; gap: 16px; }
+  .admin-info-card { background: var(--cream); border: 1px solid var(--border); border-radius: 12px; padding: 22px 20px; }
+  .admin-info-title { font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+  .admin-info-body { font-size: 13px; color: var(--gray); line-height: 1.65; }
+
+  /* FAQ */
+  .cond-faq { padding: 80px 40px; background: var(--cream); }
+  .cond-faq-inner { max-width: 800px; margin: 0 auto; }
+  .faq-list { border-top: 1px solid var(--border); margin-top: 40px; }
+  .faq-item { border-bottom: 1px solid var(--border); }
+  .faq-q { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; cursor: pointer; gap: 16px; }
+  .faq-q-text { font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 700; color: var(--navy); }
+  .faq-icon { color: var(--green); font-size: 22px; flex-shrink: 0; transition: transform .2s; line-height: 1; }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+  .faq-a { font-size: 14px; color: var(--gray); line-height: 1.75; padding-bottom: 20px; display: none; max-width: 680px; }
+  .faq-item.open .faq-a { display: block; }
+
+  /* REFER STRIP */
+  .refer-strip { background: var(--green); padding: 60px 40px; }
+  .refer-strip-inner { max-width: 1140px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+  .refer-title { font-family: 'Nunito', sans-serif; font-size: 30px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+  .refer-sub { font-size: 14px; color: rgba(255,255,255,0.7); }
+  .refer-sub a { color: #fff; font-weight: 700; }
+  .refer-actions { display: flex; gap: 12px; flex-shrink: 0; }
+  .btn-white { background: var(--white); color: var(--green); padding: 13px 26px; border-radius: 6px; font-size: 14px; font-weight: 700; transition: opacity .2s; }
+  .btn-white:hover { opacity: 0.92; }
+
+  /* FOOTER */
+  footer { background: var(--navy); padding: 56px 40px 28px; }
+  .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; max-width: 1140px; margin: 0 auto 40px; }
+  .footer-brand-name { font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+  .footer-brand-name .hv  { color: var(--teal); }
+  .footer-brand-name .inf { color: var(--green); }
+  .footer-brand-sub { font-size: 10px; color: rgba(255,255,255,0.35); letter-spacing: 0.07em; margin-bottom: 14px; }
+  .footer-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.7; margin-bottom: 14px; }
+  .footer-contact { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.8; }
+  .footer-contact a { color: var(--teal-light); }
+  .footer-col-title { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-light); font-weight: 700; margin-bottom: 16px; }
+  .footer-col-links { display: flex; flex-direction: column; gap: 9px; }
+  .footer-col-links a { font-size: 13px; color: rgba(255,255,255,0.45); transition: color .15s; }
+  .footer-col-links a:hover { color: var(--white); }
+  .footer-bottom { max-width: 1140px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.07); padding-top: 20px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .footer-legal { font-size: 11px; color: rgba(255,255,255,0.22); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+      <path d="M20 4 A16 16 0 1 0 34 12" stroke="#6ab04c" stroke-width="2.5" stroke-linecap="round"/>
+      <g transform="translate(30.5,8) rotate(35)">
+        <ellipse cx="0" cy="0" rx="4" ry="6" fill="#2eb8b8"/>
+        <line x1="0" y1="-5" x2="0" y2="5" stroke="#1a9090" stroke-width="0.8"/>
+      </g>
+      <text x="20" y="26" font-family="'Nunito Sans',sans-serif" font-size="11" font-weight="700" fill="#2eb8b8" text-anchor="middle">HV</text>
+    </svg>
+    <div class="nav-brand">
+      <div class="nav-brand-main"><span class="hv">HV</span> <span class="inf">Infusion</span> <span class="bio">&amp; Biologics</span></div>
+      <div class="nav-brand-sub">Hudson River Valley Medical PC</div>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="/conditions.html" class="active">Conditions</a>
+    <a href="/patients.html">For patients</a>
+    <a href="/providers.html">For providers</a>
+    <a href="/insurance.html">Insurance</a>
+    <a href="/about.html">About</a>
+    <a href="/providers.html#referral-form" class="nav-refer">Refer a patient</a>
+    <a href="/patients.html#appointment" class="nav-cta">Request appointment</a>
+  </div>
+</nav>
+
+<!-- SPECIALTY TABS -->
+<div class="specialty-nav">
+  <div class="specialty-nav-inner">
+    <div class="spec-tab active" onclick="showSpec('rheum')"><span class="spec-tab-dot"></span>Rheumatology</div>
+    <div class="spec-tab" onclick="showSpec('neuro')"><span class="spec-tab-dot"></span>Neurology</div>
+    <div class="spec-tab" onclick="showSpec('gi')"><span class="spec-tab-dot"></span>Gastroenterology</div>
+    <div class="spec-tab" onclick="showSpec('allergy')"><span class="spec-tab-dot"></span>Allergy &amp; Immunology</div>
+    <div class="spec-tab" onclick="showSpec('weight')"><span class="spec-tab-dot"></span>Weight Management</div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     1. RHEUMATOLOGY
+══════════════════════════════════════ -->
+<div class="condition-panel active" id="panel-rheum">
+
+  <section class="cond-hero">
+    <div class="hero-accent" style="background:linear-gradient(135deg,rgba(106,176,76,0.07) 0%,rgba(46,184,184,0.04) 100%);"></div>
+    <div class="hero-glow"></div>
+    <div class="cond-hero-inner">
+      <div>
+        <div class="breadcrumb"><a href="/">Home</a> <span>›</span> <a href="/conditions.html">Conditions</a> <span>›</span> Rheumatology</div>
+        <div class="tag green">Rheumatology</div>
+        <h1>Biologic infusion therapy<br>for <em>inflammatory</em><br>&amp; autoimmune conditions</h1>
+        <p class="cond-hero-sub">We administer a full range of biologic and specialty infusions for rheumatologic conditions — prescribed by your rheumatologist and delivered in a calm, expert environment.</p>
+        <div class="cond-hero-actions">
+          <a href="/patients.html#appointment" class="btn-green">Request an appointment</a>
+          <a href="#" class="btn-outline-white">For referring providers</a>
+        </div>
+      </div>
+      <div class="drug-card">
+        <div class="drug-card-title">Biologics we administer</div>
+        <div class="drug-list">
+          <div class="drug-item"><div class="drug-name">Remicade</div><div class="drug-generic">Infliximab — RA, PsA, AS</div></div>
+          <div class="drug-item"><div class="drug-name">Orencia</div><div class="drug-generic">Abatacept — Rheumatoid arthritis</div></div>
+          <div class="drug-item"><div class="drug-name">Actemra</div><div class="drug-generic">Tocilizumab — RA, GCA</div></div>
+          <div class="drug-item"><div class="drug-name">Benlysta</div><div class="drug-generic">Belimumab — Systemic lupus</div></div>
+          <div class="drug-item"><div class="drug-name">Reclast / Prolia</div><div class="drug-generic">Zoledronic acid / Denosumab — Osteoporosis</div></div>
+          <div class="drug-item"><div class="drug-name">Krystexxa</div><div class="drug-generic">Pegloticase — Chronic gout</div></div>
+          <div class="drug-item"><div class="drug-name">Simponi Aria</div><div class="drug-generic">Golimumab — RA, PsA, AS</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cond-overview">
+    <div class="cond-overview-inner">
+      <div>
+        <div class="tag green">About rheumatologic conditions</div>
+        <h2 class="section-title">Expert infusion care for complex inflammatory disease</h2>
+        <p class="overview-body">Rheumatologic conditions — including rheumatoid arthritis, lupus, psoriatic arthritis, and ankylosing spondylitis — are chronic, often progressive diseases that require consistent, long-term management. <strong>Biologic therapies have transformed outcomes</strong> for many patients, offering disease control that was not possible with older medications.</p>
+        <p class="overview-body">These medications are administered by IV infusion on a scheduled basis — typically every 4 to 8 weeks — and require a clinical setting with trained nursing staff and monitoring capability. Our center is built specifically for this type of care.</p>
+        <div class="overview-pull">"Consistent, expert administration of your biologic therapy is just as important as the prescription itself."</div>
+        <a href="/patients.html#appointment" class="btn-green">Request an appointment</a>
+      </div>
+      <div class="conditions-list-box">
+        <div class="conditions-list-title">Conditions we treat</div>
+        <div class="conditions-list">
+          <div class="cond-item"><div class="cond-dot"></div>Rheumatoid arthritis (RA)</div>
+          <div class="cond-item"><div class="cond-dot"></div>Psoriatic arthritis (PsA)</div>
+          <div class="cond-item"><div class="cond-dot"></div>Ankylosing spondylitis (AS)</div>
+          <div class="cond-item"><div class="cond-dot teal"></div>Systemic lupus erythematosus (SLE)</div>
+          <div class="cond-item"><div class="cond-dot teal"></div>Giant cell arteritis (GCA)</div>
+          <div class="cond-item"><div class="cond-dot"></div>Polymyalgia rheumatica</div>
+          <div class="cond-item"><div class="cond-dot"></div>Juvenile idiopathic arthritis</div>
+          <div class="cond-item"><div class="cond-dot teal"></div>Osteoporosis (IV bisphosphonate therapy)</div>
+          <div class="cond-item"><div class="cond-dot teal"></div>Chronic refractory gout</div>
+          <div class="cond-item"><div class="cond-dot"></div>Other inflammatory arthropathies</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cond-meds">
+    <div class="cond-meds-inner">
+      <div class="tag green">Medications administered</div>
+      <h2 class="section-title">Rheumatology biologics &amp; infusion therapies</h2>
+      <p class="section-sub">All medications are prescribed by your rheumatologist. We administer, monitor, and coordinate with your physician at every step.</p>
+      <div class="meds-grid">
+        <div class="med-card">
+          <div class="med-brand">Remicade</div>
+          <div class="med-generic">Infliximab</div>
+          <div class="med-use">Used to treat rheumatoid arthritis, psoriatic arthritis, and ankylosing spondylitis. One of the most widely used biologics in rheumatology.</div>
+          <div class="med-detail">Typical infusion: 2–3 hours · Every 4–8 weeks · Requires pre-medication</div>
+        </div>
+        <div class="med-card teal-accent">
+          <div class="med-brand">Orencia</div>
+          <div class="med-generic">Abatacept</div>
+          <div class="med-use">Approved for moderate-to-severe rheumatoid arthritis in patients who have not responded adequately to other DMARDs or biologics.</div>
+          <div class="med-detail">Typical infusion: 30 minutes · Every 4 weeks · Well-tolerated profile</div>
+        </div>
+        <div class="med-card">
+          <div class="med-brand">Actemra</div>
+          <div class="med-generic">Tocilizumab</div>
+          <div class="med-use">Used for rheumatoid arthritis and giant cell arteritis. Targets the IL-6 pathway, offering an alternative for patients who have not responded to TNF inhibitors.</div>
+          <div class="med-detail">Typical infusion: 1 hour · Every 4 weeks</div>
+        </div>
+        <div class="med-card teal-accent">
+          <div class="med-brand">Benlysta</div>
+          <div class="med-generic">Belimumab</div>
+          <div class="med-use">The first biologic approved specifically for systemic lupus erythematosus (SLE). Reduces lupus flares and organ damage progression.</div>
+          <div class="med-detail">Typical infusion: 1 hour · Every 4 weeks after loading doses</div>
+        </div>
+        <div class="med-card">
+          <div class="med-brand">Reclast / Prolia</div>
+          <div class="med-generic">Zoledronic acid / Denosumab</div>
+          <div class="med-use">IV bisphosphonate therapy for osteoporosis and bone density management — often preferred when oral medications are not tolerated.</div>
+          <div class="med-detail">Reclast: once yearly infusion · 15–30 minutes</div>
+        </div>
+        <div class="med-card teal-accent">
+          <div class="med-brand">Krystexxa</div>
+          <div class="med-generic">Pegloticase</div>
+          <div class="med-use">For chronic refractory gout that has not responded to conventional urate-lowering therapy. Rapidly lowers uric acid levels.</div>
+          <div class="med-detail">Typical infusion: 2+ hours · Every 2 weeks · Close monitoring required</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cond-admin">
+    <div class="cond-admin-inner">
+      <div>
+        <div class="tag green">How we administer your therapy</div>
+        <h2 class="section-title" style="font-size:32px;">From referral to infusion — we manage every step</h2>
+        <div class="admin-steps">
+          <div class="admin-step"><div class="admin-circle">1</div><div><div class="admin-title">Receive your physician's referral</div><div class="admin-body">Your rheumatologist sends us the prescription and referral. We confirm receipt within one business day.</div></div></div>
+          <div class="admin-step"><div class="admin-circle">2</div><div><div class="admin-title">Insurance verification &amp; prior auth</div><div class="admin-body">We verify your biologic benefits and obtain prior authorization — handling all the paperwork on your behalf.</div></div></div>
+          <div class="admin-step"><div class="admin-circle">3</div><div><div class="admin-title">Medication ordered &amp; delivered</div><div class="admin-body">Your biologic is ordered through specialty pharmacy and delivered directly to our center before your appointment.</div></div></div>
+          <div class="admin-step"><div class="admin-circle">4</div><div><div class="admin-title">Infusion with expert nursing care</div><div class="admin-body">Our infusion nurses prepare, administer, and monitor your medication. We manage any reactions promptly and professionally.</div></div></div>
+          <div class="admin-step" style="padding-bottom:0;"><div class="admin-circle">5</div><div><div class="admin-title">Report sent to your rheumatologist</div><div class="admin-body">After every infusion we send a full treatment report to your physician — keeping your care team fully informed.</div></div></div>
+        </div>
+      </div>
+      <div class="admin-info-cards">
+        <div class="admin-info-card">
+          <div class="admin-info-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Typical infusion duration
+          </div>
+          <div class="admin-info-body">Rheumatology infusions typically take 30 minutes to 3 hours depending on your medication and dose. We'll give you a specific time estimate before your visit so you can plan your day.</div>
+        </div>
+        <div class="admin-info-card">
+          <div class="admin-info-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2eb8b8" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Safety &amp; monitoring
+          </div>
+          <div class="admin-info-body">Our nurses monitor you throughout your entire infusion. All biologic therapies are administered following established clinical protocols with emergency response capability on site.</div>
+        </div>
+        <div class="admin-info-card">
+          <div class="admin-info-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2.5" stroke-linecap="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            Insurance coverage
+          </div>
+          <div class="admin-info-body">Most biologic rheumatology therapies are covered under insurance Part B (medical benefit) rather than the pharmacy benefit. We handle prior authorization and billing directly.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cond-faq">
+    <div class="cond-faq-inner">
+      <div class="tag green">Frequently asked questions</div>
+      <h2 class="section-title">Rheumatology infusion FAQs</h2>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">Do I need a referral from my rheumatologist?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a">Yes — all infusion therapies require a referral and prescription from your rheumatologist or treating physician. Your doctor will send the referral directly to us. We'll handle everything from that point — insurance verification, prior auth, scheduling, and medication ordering.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">How long will my infusion take?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a">It depends on your specific medication and dose. Orencia typically takes about 30 minutes, while Remicade and Krystexxa can take 2–3 hours or more. We'll give you a specific estimate before your first visit so you can plan your day accordingly. Bring something to do — a book, tablet, or headphones — and we'll keep you comfortable throughout.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">What happens if I have a reaction during my infusion?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a">Infusion reactions are uncommon but our team is fully trained to identify and manage them immediately. We slow or pause the infusion, administer appropriate treatment, and contact your physician. Many biologic infusions include pre-medications (antihistamines, acetaminophen, steroids) to reduce reaction risk. Your safety is our first priority at every visit.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">Can I switch from hospital infusion to your center?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a">Absolutely — and many patients make this transition because our center offers a more comfortable, personalized experience at a lower cost. All we need is a new referral from your rheumatologist and your current infusion records. We'll handle the rest, including transferring your prior authorization to our facility.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="refer-strip">
+    <div class="refer-strip-inner">
+      <div>
+        <div class="refer-title">Ready to start your rheumatology infusion?</div>
+        <div class="refer-sub">Ask your rheumatologist for a referral or call us directly: <a href="tel:8458483626">(845) 848-3626</a></div>
+      </div>
+      <div class="refer-actions">
+        <a href="/patients.html#appointment" class="btn-white">Request appointment</a>
+        <a href="#" class="btn-outline-white">Provider referral form</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     2. NEUROLOGY
+══════════════════════════════════════ -->
+<div class="condition-panel" id="panel-neuro">
+
+  <section class="cond-hero">
+    <div class="hero-accent" style="background:linear-gradient(135deg,rgba(46,184,184,0.08) 0%,rgba(106,176,76,0.04) 100%);"></div>
+    <div class="hero-glow"></div>
+    <div class="cond-hero-inner">
+      <div>
+        <div class="breadcrumb"><a href="/">Home</a> <span>›</span> <a href="/conditions.html">Conditions</a> <span>›</span> Neurology</div>
+        <div class="tag teal">Neurology</div>
+        <h1>Specialty infusion therapy<br>for <em>neurological</em><br>conditions</h1>
+        <p class="cond-hero-sub">We administer complex neurological infusion therapies — including MS medications, IVIG, and rare disease biologics — with the precision and monitoring these therapies require.</p>
+        <div class="cond-hero-actions">
+          <a href="/patients.html#appointment" class="btn-green">Request an appointment</a>
+          <a href="#" class="btn-outline-white">For referring providers</a>
+        </div>
+      </div>
+      <div class="drug-card" style="border-color: rgba(46,184,184,0.3);">
+        <div class="drug-card-title" style="color:var(--teal-light);">Biologics we administer</div>
+        <div class="drug-list">
+          <div class="drug-item"><div class="drug-name">Tysabri</div><div class="drug-generic">Natalizumab — Multiple sclerosis, Crohn's</div></div>
+          <div class="drug-item"><div class="drug-name">Ocrevus</div><div class="drug-generic">Ocrelizumab — Multiple sclerosis</div></div>
+          <div class="drug-item"><div class="drug-name">IVIG</div><div class="drug-generic">Intravenous immunoglobulin — CIDP, GBS, MG</div></div>
+          <div class="drug-item"><div class="drug-name">Soliris</div><div class="drug-generic">Eculizumab — NMO, MG</div></div>
+          <div class="drug-item"><div class="drug-name">Leqembi</div><div class="drug-generic">Lecanemab — Early Alzheimer's disease</div></div>
+          <div class="drug-item"><div class="drug-name">Kesimpta</div><div class="drug-generic">Ofatumumab — Relapsing MS</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cond-overview">
+    <div class="cond-overview-inner">
+      <div>
+        <div class="tag teal">About neurological conditions</div>
+        <h2 class="section-title">Precise, monitored infusion care for complex neurological disease</h2>
+        <p class="overview-body">Neurological conditions requiring infusion therapy — including multiple sclerosis, CIDP, myasthenia gravis, and neuromyelitis optica — are among the most complex conditions we treat. <strong>The medications involved are highly effective but require close monitoring</strong>, experienced nursing staff, and rigorous safety protocols.</p>
+        <p class="overview-body">IVIG therapy and biologic medications like Tysabri and Ocrevus have dramatically improved outcomes for many patients — but consistent, reliable access to expert infusion care is essential to achieving those outcomes.</p>
+        <div class="overview-pull">"Neurological infusion patients deserve consistency — the same nurses, the same environment, the same standard every time."</div>
+        <a href="#" class="btn-teal">Request an appointment</a>
+      </div>
+      <div class="conditions-list-box">
+        <div class="conditions-list-title">Conditions we treat</div>
+        <div class="conditions-list">
+          <div class="cond-item"><div class="cond-dot teal"></div>Multiple sclerosis (MS) — relapsing &amp; progressive</div>
+          <div class="cond-item"><div class="cond-dot teal"></div>Chronic inflammatory demyelinating polyneuropathy (CIDP)</div>
+          <div class="cond-item"><div class="cond-dot"></div>Guillain-Barré syndrome (GBS)</div>
+          <div class="cond-item"><div class="cond-dot"></div>Myasthenia gravis (MG)</div>
+          <div class="cond-item"><div class="cond-dot teal"></div>Neuromyelitis optica spectrum disorder (NMOSD)</div>
+          <div class="cond-item"><div class="cond-dot"></div>Primary immunodeficiency with neurological involvement</div>
+          <div class="cond-item"><div class="cond-dot teal"></div>Early Alzheimer's disease (Leqembi)</div>
+          <div class="cond-item"><div class="cond-dot"></div>Multifocal motor neuropathy</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cond-meds">
+    <div class="cond-meds-inner">
+      <div class="tag teal">Medications administered</div>
+      <h2 class="section-title">Neurology infusion therapies</h2>
+      <p class="section-sub">All medications are prescribed by your neurologist. We administer, monitor carefully, and send full reports back to your physician after every visit.</p>
+      <div class="meds-grid">
+        <div class="med-card teal-accent">
+          <div class="med-brand">Tysabri</div>
+          <div class="med-generic">Natalizumab</div>
+          <div class="med-use">A highly effective treatment for relapsing MS and active Crohn's disease. Requires TOUCH prescribing program enrollment and regular monitoring.</div>
+          <div class="med-detail">Infusion: ~1 hour · Every 4 weeks · JC virus monitoring required</div>
+        </div>
+        <div class="med-card">
+          <div class="med-brand">Ocrevus</div>
+          <div class="med-generic">Ocrelizumab</div>
+          <div class="med-use">FDA-approved for both relapsing and primary progressive MS. The first therapy approved for PPMS. Requires pre-medication and extended observation.</div>
+          <div class="med-detail">Infusion: 3.5–4+ hours · Every 6 months · Pre-medication required</div>
+        </div>
+        <div class="med-card teal-accent">
+          <div class="med-brand">IVIG</div>
+          <div class="med-generic">Intravenous Immunoglobulin</div>
+          <div class="med-use">Used for CIDP, GBS, myasthenia gravis, and other autoimmune neurological conditions. Replaces or supplements deficient antibodies.</div>
+          <div class="med-detail">Infusion: 2–6 hours depending on dose · Frequency varies by condition</div>
+        </div>
+        <div class="med-card">
+          <div class="med-brand">Soliris</div>
+          <div class="med-generic">Eculizumab</div>
+          <div class="med-use">Used for neuromyelitis optica spectrum disorder (NMOSD) and myasthenia gravis. A complement inhibitor requiring meningococcal vaccination prior to treatment.</div>
+          <div class="med-detail">Infusion: 35 minutes · Every 2 weeks (maintenance)</div>
+        </div>
+        <div class="med-card teal-accent">
+          <div class="med-brand">Leqembi</div>
+          <div class="med-generic">Lecanemab</div>
+          <div class="med-use">First FDA-approved treatment to slow progression of early Alzheimer's disease. Targets and removes amyloid plaques from the brain.</div>
+          <div class="med-detail">Infusion: ~1 hour · Every 2 weeks · MRI monitoring required</div>
+        </div>
+        <div class="med-card">
+          <div class="med-brand">Kesimpta</div>
+          <div class="med-generic">Ofatumumab</div>
+          <div class="med-use">A B-cell depleting therapy for relapsing forms of MS. Administered as a subcutaneous injection on a monthly schedule after loading doses.</div>
+          <div class="med-detail">Administration: monthly injection · Loading: weeks 0, 1, 2</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cond-admin">
+    <div class="cond-admin-inner">
+      <div>
+        <div class="tag teal">How we administer your therapy</div>
+        <h2 class="section-title" style="font-size:32px;">Expert neurological infusion from referral to follow-up</h2>
+        <div class="admin-steps">
+          <div class="admin-step"><div class="admin-circle" style="background:var(--teal);">1</div><div><div class="admin-title">Neurologist referral received</div><div class="admin-body">We receive your neurologist's referral and prescription and confirm within one business day.</div></div></div>
+          <div class="admin-step"><div class="admin-circle">2</div><div><div class="admin-title">Program enrollment &amp; prior auth</div><div class="admin-body">Some neurological medications require REMS program enrollment (e.g. Tysabri TOUCH). We manage all enrollment and insurance authorization.</div></div></div>
+          <div class="admin-step"><div class="admin-circle" style="background:var(--teal);">3</div><div><div class="admin-title">Pre-infusion assessment</div><div class="admin-body">For many neurological biologics, our nurses complete a pre-infusion assessment and administer required pre-medications before starting your infusion.</div></div></div>
+          <div class="admin-step"><div class="admin-circle">4</div><div><div class="admin-title">Infusion with close monitoring</div><div class="admin-body">Neurological infusions require particularly close monitoring. Our nurses observe you throughout and for a required observation period afterward.</div></div></div>
+          <div class="admin-step" style="padding-bottom:0;"><div class="admin-circle" style="background:var(--teal);">5</div><div><div class="admin-title">Clinical report to your neurologist</div><div class="admin-body">A detailed treatment report is sent to your neurologist including vitals, infusion details, and any observations after every visit.</div></div></div>
+        </div>
+      </div>
+      <div class="admin-info-cards">
+        <div class="admin-info-card">
+          <div class="admin-info-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2eb8b8" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Longer infusion times</div>
+          <div class="admin-info-body">Many neurological infusions — particularly Ocrevus and IVIG — take 3–6 hours. Our suites are designed for exactly this: comfortable chairs, entertainment, Wi-Fi, and refreshments throughout.</div>
+        </div>
+        <div class="admin-info-card">
+          <div class="admin-info-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>REMS &amp; safety programs</div>
+          <div class="admin-info-body">Medications like Tysabri require REMS program compliance. We are fully registered with required programs and manage all enrollment, monitoring, and reporting obligations.</div>
+        </div>
+        <div class="admin-info-card">
+          <div class="admin-info-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2eb8b8" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07"/></svg>Direct neurologist communication</div>
+          <div class="admin-info-body">We maintain close communication with your neurologist's office — reporting any changes, reactions, or concerns promptly. Your neurologist stays fully informed between office visits.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cond-faq">
+    <div class="cond-faq-inner">
+      <div class="tag teal">FAQs</div>
+      <h2 class="section-title">Neurology infusion FAQs</h2>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">Can you administer Tysabri here?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a">Yes. We are a registered Tysabri TOUCH-certified infusion site. Tysabri (natalizumab) requires enrollment in the TOUCH Prescribing Program due to the risk of PML. We manage all program requirements including enrollment, JC virus antibody monitoring documentation, and infusion observation protocols.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">How long does an Ocrevus infusion take?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a">The initial Ocrevus infusions (two doses given 2 weeks apart) typically take 3.5 hours each, plus an additional 1-hour observation period after each infusion. Subsequent infusions may be shorter for eligible patients. We pre-medicate with methylprednisolone, an antihistamine, and acetaminophen before each infusion. Plan for a full day for your Ocrevus infusion — we'll make you as comfortable as possible.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">Do you administer IVIG for CIDP?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a">Yes — IVIG therapy for CIDP and other autoimmune neurological conditions is one of our most frequently administered therapies. Infusion duration varies based on your dose and the specific IVIG product prescribed (Gamunex, Privigen, Gammagard, etc.). Most CIDP patients receive IVIG every 3–4 weeks on an ongoing basis, and we work hard to keep your scheduling consistent and predictable.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">Can you administer Leqembi for Alzheimer's?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a">Yes. Leqembi (lecanemab) is administered every two weeks and requires ongoing MRI monitoring for ARIA (amyloid-related imaging abnormalities). We coordinate with your neurologist to ensure appropriate imaging is scheduled and results reviewed before continuing treatment. If you or a family member has been prescribed Leqembi, contact us to discuss the full treatment process.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="refer-strip">
+    <div class="refer-strip-inner">
+      <div>
+        <div class="refer-title">Ready to start your neurology infusion?</div>
+        <div class="refer-sub">Ask your neurologist for a referral or call us: <a href="tel:8458483626">(845) 848-3626</a></div>
+      </div>
+      <div class="refer-actions">
+        <a href="/patients.html#appointment" class="btn-white">Request appointment</a>
+        <a href="#" class="btn-outline-white">Provider referral form</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     3. GASTROENTEROLOGY
+══════════════════════════════════════ -->
+<div class="condition-panel" id="panel-gi">
+
+  <section class="cond-hero">
+    <div class="hero-accent" style="background:linear-gradient(135deg,rgba(106,176,76,0.07) 0%,rgba(46,184,184,0.04) 100%);"></div>
+    <div class="hero-glow"></div>
+    <div class="cond-hero-inner">
+      <div>
+        <div class="breadcrumb"><a href="/">Home</a> <span>›</span> <a href="/conditions.html">Conditions</a> <span>›</span> Gastroenterology</div>
+        <div class="tag green">Gastroenterology</div>
+        <h1>Biologic infusion therapy<br>for <em>inflammatory</em><br>bowel disease</h1>
+        <p class="cond-hero-sub">We administer biologic therapies for Crohn's disease, ulcerative colitis, and other GI conditions — coordinated directly with your gastroenterologist.</p>
+        <div class="cond-hero-actions">
+          <a href="/patients.html#appointment" class="btn-green">Request an appointment</a>
+          <a href="#" class="btn-outline-white">For referring providers</a>
+        </div>
+      </div>
+      <div class="drug-card">
+        <div class="drug-card-title">Biologics we administer</div>
+        <div class="drug-list">
+          <div class="drug-item"><div class="drug-name">Remicade</div><div class="drug-generic">Infliximab — Crohn's, ulcerative colitis</div></div>
+          <div class="drug-item"><div class="drug-name">Entyvio</div><div class="drug-generic">Vedolizumab — Crohn's, ulcerative colitis</div></div>
+          <div class="drug-item"><div class="drug-name">Stelara</div><div class="drug-generic">Ustekinumab — Crohn's disease</div></div>
+          <div class="drug-item"><div class="drug-name">Simponi Aria</div><div class="drug-generic">Golimumab — Ulcerative colitis</div></div>
+          <div class="drug-item"><div class="drug-name">Tysabri</div><div class="drug-generic">Natalizumab — Crohn's disease</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cond-overview">
+    <div class="cond-overview-inner">
+      <div>
+        <div class="tag green">About GI conditions</div>
+        <h2 class="section-title">Expert biologic care for Crohn's &amp; colitis</h2>
+        <p class="overview-body">Inflammatory bowel disease — including Crohn's disease and ulcerative colitis — affects hundreds of thousands of patients in the US and often requires long-term biologic therapy to achieve and maintain remission. <strong>Biologic medications have transformed IBD management</strong>, offering many patients the possibility of sustained remission and improved quality of life.</p>
+        <p class="overview-body">These medications work best when administered consistently, on schedule, and by experienced nursing staff who understand the nuances of each therapy. Missing or delaying infusions can lead to disease flares and loss of response.</p>
+        <div class="overview-pull">"Consistency and reliability in biologic administration is critical to maintaining remission in IBD."</div>
+        <a href="/patients.html#appointment" class="btn-green">Request an appointment</a>
+      </div>
+      <div class="conditions-list-box">
+        <div class="conditions-list-title">Conditions we treat</div>
+        <div class="conditions-list">
+          <div class="cond-item"><div class="cond-dot"></div>Crohn's disease — moderate to severe</div>
+          <div class="cond-item"><div class="cond-dot"></div>Ulcerative colitis — moderate to severe</div>
+          <div class="cond-item"><div class="cond-dot teal"></div>Indeterminate colitis</div>
+          <div class="cond-item"><div class="cond-dot teal"></div>Fistulizing Crohn's disease</div>
+          <div class="cond-item"><div class="cond-dot"></div>Microscopic colitis (select cases)</div>
+          <div class="cond-item"><div class="cond-dot teal"></div>IBD with extraintestinal manifestations</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cond-meds">
+    <div class="cond-meds-inner">
+      <div class="tag green">Medications administered</div>
+      <h2 class="section-title">GI biologic &amp; specialty infusion therapies</h2>
+      <p class="section-sub">All medications are prescribed by your gastroenterologist. We coordinate the entire process — insurance, scheduling, medication, administration, and reporting.</p>
+      <div class="meds-grid">
+        <div class="med-card">
+          <div class="med-brand">Remicade</div><div class="med-generic">Infliximab</div>
+          <div class="med-use">One of the most established biologics for moderate-to-severe Crohn's disease and ulcerative colitis. Also used for fistulizing Crohn's disease.</div>
+          <div class="med-detail">Infusion: 2 hours · Every 8 weeks (maintenance) · Pre-medication typically given</div>
+        </div>
+        <div class="med-card teal-accent">
+          <div class="med-brand">Entyvio</div><div class="med-generic">Vedolizumab</div>
+          <div class="med-use">A gut-selective biologic for moderate-to-severe Crohn's and UC. Preferred for patients who have not tolerated or responded to TNF inhibitors.</div>
+          <div class="med-detail">Infusion: 30 minutes · Every 8 weeks after induction doses</div>
+        </div>
+        <div class="med-card">
+          <div class="med-brand">Stelara</div><div class="med-generic">Ustekinumab</div>
+          <div class="med-use">An IL-12/23 inhibitor for moderate-to-severe Crohn's disease. The initial dose is given by IV infusion; maintenance doses are subcutaneous.</div>
+          <div class="med-detail">IV induction: ~1 hour · Single IV dose followed by subcutaneous maintenance</div>
+        </div>
+        <div class="med-card teal-accent">
+          <div class="med-brand">Simponi Aria</div><div class="med-generic">Golimumab</div>
+          <div class="med-use">Approved for moderate-to-severe ulcerative colitis in adults who have not responded adequately to prior therapy.</div>
+          <div class="med-detail">Infusion: 30 minutes · Every 8 weeks (maintenance)</div>
+        </div>
+        <div class="med-card">
+          <div class="med-brand">Tysabri</div><div class="med-generic">Natalizumab</div>
+          <div class="med-use">An option for Crohn's disease patients who have not responded to other biologics. Requires TOUCH program enrollment.</div>
+          <div class="med-detail">Infusion: ~1 hour · Every 4 weeks · JC virus monitoring</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cond-admin">
+    <div class="cond-admin-inner">
+      <div>
+        <div class="tag green">The infusion process</div>
+        <h2 class="section-title" style="font-size:32px;">Reliable GI infusion from your first dose onward</h2>
+        <div class="admin-steps">
+          <div class="admin-step"><div class="admin-circle">1</div><div><div class="admin-title">Gastroenterologist referral</div><div class="admin-body">Your GI physician sends a referral with prescription details. We confirm receipt and begin the process immediately.</div></div></div>
+          <div class="admin-step"><div class="admin-circle">2</div><div><div class="admin-title">Insurance verification &amp; prior auth</div><div class="admin-body">We obtain prior authorization for your biologic therapy — a process we manage completely so your doctor's office doesn't have to.</div></div></div>
+          <div class="admin-step"><div class="admin-circle">3</div><div><div class="admin-title">Induction series scheduling</div><div class="admin-body">Many GI biologics have an induction series (multiple doses at weeks 0, 2, 6). We schedule all doses and ensure you stay on protocol.</div></div></div>
+          <div class="admin-step"><div class="admin-circle">4</div><div><div class="admin-title">Maintenance infusion schedule</div><div class="admin-body">We build a consistent maintenance schedule — typically every 8 weeks — and contact you to confirm each upcoming appointment.</div></div></div>
+          <div class="admin-step" style="padding-bottom:0;"><div class="admin-circle">5</div><div><div class="admin-title">Reports to your GI physician</div><div class="admin-body">Your gastroenterologist receives a full treatment report after every infusion, keeping your care team informed between office visits.</div></div></div>
+        </div>
+      </div>
+      <div class="admin-info-cards">
+        <div class="admin-info-card">
+          <div class="admin-info-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Staying on schedule matters</div>
+          <div class="admin-info-body">For IBD biologics, missing or delaying infusions significantly increases the risk of disease flare and loss of drug response. We proactively contact you before each scheduled appointment and make rescheduling easy.</div>
+        </div>
+        <div class="admin-info-card">
+          <div class="admin-info-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2eb8b8" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Infusion reaction management</div>
+          <div class="admin-info-body">Infusion reactions to GI biologics — particularly Remicade — are manageable when identified and treated promptly. Our team is experienced in reaction protocols and will slow or pause infusions as needed.</div>
+        </div>
+        <div class="admin-info-card">
+          <div class="admin-info-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Co-pay assistance available</div>
+          <div class="admin-info-body">All major GI biologics have manufacturer co-pay assistance programs. We apply for these programs on your behalf — in many cases reducing your cost significantly or to $0.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cond-faq">
+    <div class="cond-faq-inner">
+      <div class="tag green">FAQs</div>
+      <h2 class="section-title">Gastroenterology infusion FAQs</h2>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">What is an induction series and how does it work?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a">Many GI biologics — including Remicade and Entyvio — start with an induction series: multiple infusions given at weeks 0, 2, and 6 to establish therapeutic drug levels quickly. After induction, you transition to maintenance infusions every 8 weeks. We schedule and track all induction doses and transition you seamlessly to the maintenance phase.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">What happens if I miss an infusion?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a">Missing an infusion can increase your risk of a disease flare and may cause you to lose response to your biologic. If you need to reschedule, contact us as soon as possible — we'll work to get you back on track quickly. Your gastroenterologist will be notified of any schedule changes so they can advise on next steps if needed.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">Can I eat normally before my infusion?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a">Yes — you should eat normally before your GI infusion. A full meal beforehand is actually recommended. Unlike some procedures, there is no need to fast before an infusion. Staying well-hydrated is also helpful for IV access. If your physician has given you specific dietary instructions related to your condition, follow those.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">Can I transfer my infusions from a hospital to your center?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a">Yes, and many patients choose to do so for a better experience and lower cost. We just need your gastroenterologist to send a new referral for our facility, and we'll request your infusion history for continuity. Your prior authorization will need to be transferred to our site — we handle that process completely.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="refer-strip">
+    <div class="refer-strip-inner">
+      <div>
+        <div class="refer-title">Ready to start your GI infusion?</div>
+        <div class="refer-sub">Ask your gastroenterologist for a referral or call us: <a href="tel:8458483626">(845) 848-3626</a></div>
+      </div>
+      <div class="refer-actions">
+        <a href="/patients.html#appointment" class="btn-white">Request appointment</a>
+        <a href="#" class="btn-outline-white">Provider referral form</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     4. ALLERGY & IMMUNOLOGY
+══════════════════════════════════════ -->
+<div class="condition-panel" id="panel-allergy">
+
+  <section class="cond-hero">
+    <div class="hero-accent" style="background:linear-gradient(135deg,rgba(46,184,184,0.08) 0%,rgba(106,176,76,0.04) 100%);"></div>
+    <div class="hero-glow"></div>
+    <div class="cond-hero-inner">
+      <div>
+        <div class="breadcrumb"><a href="/">Home</a> <span>›</span> <a href="/conditions.html">Conditions</a> <span>›</span> Allergy &amp; Immunology</div>
+        <div class="tag teal">Allergy &amp; Immunology</div>
+        <h1>IVIG, biologic &amp;<br>immunotherapy infusions<br>for <em>immune conditions</em></h1>
+        <p class="cond-hero-sub">We administer IVIG, SCIG, and biologic therapies for primary immunodeficiency, severe asthma, allergic conditions, and other complex immune disorders.</p>
+        <div class="cond-hero-actions">
+          <a href="/patients.html#appointment" class="btn-green">Request an appointment</a>
+          <a href="#" class="btn-outline-white">For referring providers</a>
+        </div>
+      </div>
+      <div class="drug-card" style="border-color:rgba(46,184,184,0.3);">
+        <div class="drug-card-title" style="color:var(--teal-light);">Therapies we administer</div>
+        <div class="drug-list">
+          <div class="drug-item"><div class="drug-name">IVIG</div><div class="drug-generic">Intravenous immunoglobulin — Primary immunodeficiency</div></div>
+          <div class="drug-item"><div class="drug-name">SCIG</div><div class="drug-generic">Subcutaneous immunoglobulin — PID, secondary immunodeficiency</div></div>
+          <div class="drug-item"><div class="drug-name">Xolair</div><div class="drug-generic">Omalizumab — Severe allergic asthma, urticaria</div></div>
+          <div class="drug-item"><div class="drug-name">Fasenra</div><div class="drug-generic">Benralizumab — Severe eosinophilic asthma</div></div>
+          <div class="drug-item"><div class="drug-name">Nucala</div><div class="drug-generic">Mepolizumab — Severe eosinophilic asthma</div></div>
+          <div class="drug-item"><div class="drug-name">Dupixent IV</div><div class="drug-generic">Dupilumab — Atopic conditions</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cond-overview">
+    <div class="cond-overview-inner">
+      <div>
+        <div class="tag teal">About immune conditions</div>
+        <h2 class="section-title">Expert infusion care for complex allergic &amp; immune disorders</h2>
+        <p class="overview-body">Allergic and immunological conditions — from primary immunodeficiency to severe asthma to chronic urticaria — often require specialized infusion or injectable therapies that go far beyond standard office-based care. <strong>IVIG, SCIG, and biologic therapies</strong> for these conditions require experienced administration, careful monitoring, and consistent scheduling.</p>
+        <p class="overview-body">Our team is experienced with the full spectrum of allergy and immunology infusion therapies, and we work closely with your allergist or immunologist to ensure your treatment proceeds safely and on schedule.</p>
+        <div class="overview-pull">"For immunodeficiency patients, consistent IVIG administration isn't optional — it's the difference between protection and vulnerability."</div>
+        <a href="#" class="btn-teal">Request an appointment</a>
+      </div>
+      <div class="conditions-list-box">
+        <div class="conditions-list-title">Conditions we treat</div>
+        <div class="conditions-list">
+          <div class="cond-item"><div class="cond-dot teal"></div>Primary immunodeficiency diseases (PIDD)</div>
+          <div class="cond-item"><div class="cond-dot teal"></div>Common variable immunodeficiency (CVID)</div>
+          <div class="cond-item"><div class="cond-dot"></div>Severe allergic asthma</div>
+          <div class="cond-item"><div class="cond-dot"></div>Severe eosinophilic asthma</div>
+          <div class="cond-item"><div class="cond-dot teal"></div>Chronic spontaneous urticaria (CSU)</div>
+          <div class="cond-item"><div class="cond-dot"></div>Atopic dermatitis — severe cases</div>
+          <div class="cond-item"><div class="cond-dot teal"></div>Secondary immunodeficiency (post-chemo, etc.)</div>
+          <div class="cond-item"><div class="cond-dot"></div>Hypogammaglobulinemia</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cond-meds">
+    <div class="cond-meds-inner">
+      <div class="tag teal">Therapies administered</div>
+      <h2 class="section-title">Allergy &amp; immunology infusion therapies</h2>
+      <p class="section-sub">All therapies are prescribed by your allergist or immunologist. We handle insurance verification, prior auth, medication ordering, and administration.</p>
+      <div class="meds-grid">
+        <div class="med-card teal-accent">
+          <div class="med-brand">IVIG</div><div class="med-generic">Intravenous Immunoglobulin</div>
+          <div class="med-use">The cornerstone of treatment for primary immunodeficiency — replacing missing antibodies and protecting against recurrent infections. Multiple IVIG products available.</div>
+          <div class="med-detail">Infusion: 2–6 hours · Every 3–4 weeks · Product selection per physician</div>
+        </div>
+        <div class="med-card">
+          <div class="med-brand">SCIG</div><div class="med-generic">Subcutaneous Immunoglobulin</div>
+          <div class="med-use">An alternative to IVIG for immunodeficiency — administered subcutaneously, typically weekly. We train patients for home use or administer in-center.</div>
+          <div class="med-detail">Administration: weekly · Shorter infusion time · Flexible scheduling</div>
+        </div>
+        <div class="med-card teal-accent">
+          <div class="med-brand">Xolair</div><div class="med-generic">Omalizumab</div>
+          <div class="med-use">For moderate-to-severe allergic asthma and chronic spontaneous urticaria uncontrolled by antihistamines. Requires 30-minute post-injection observation.</div>
+          <div class="med-detail">Injection: subcutaneous · Every 2–4 weeks · 30-min observation required</div>
+        </div>
+        <div class="med-card">
+          <div class="med-brand">Fasenra</div><div class="med-generic">Benralizumab</div>
+          <div class="med-use">For severe eosinophilic asthma. Targets the IL-5 receptor, dramatically reducing eosinophil counts and asthma exacerbations.</div>
+          <div class="med-detail">Injection: subcutaneous · Every 8 weeks (after initial doses)</div>
+        </div>
+        <div class="med-card teal-accent">
+          <div class="med-brand">Nucala</div><div class="med-generic">Mepolizumab</div>
+          <div class="med-use">An IL-5 antagonist for severe eosinophilic asthma and other eosinophilic conditions. Given as a subcutaneous injection monthly.</div>
+          <div class="med-detail">Injection: subcutaneous · Every 4 weeks</div>
+        </div>
+        <div class="med-card">
+          <div class="med-brand">Cinqair</div><div class="med-generic">Reslizumab</div>
+          <div class="med-use">An IV biologic for severe eosinophilic asthma in adults. One of the few asthma biologics administered by IV infusion rather than injection.</div>
+          <div class="med-detail">Infusion: 20–50 minutes · Every 4 weeks · IV administration</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cond-admin">
+    <div class="cond-admin-inner">
+      <div>
+        <div class="tag teal">How we administer your therapy</div>
+        <h2 class="section-title" style="font-size:32px;">Expert immunology infusion from referral to follow-up</h2>
+        <div class="admin-steps">
+          <div class="admin-step"><div class="admin-circle" style="background:var(--teal);">1</div><div><div class="admin-title">Allergist / immunologist referral</div><div class="admin-body">Your physician sends the referral with specific product and dosing instructions. IVIG product selection is an important clinical decision — we follow your physician's orders precisely.</div></div></div>
+          <div class="admin-step"><div class="admin-circle">2</div><div><div class="admin-title">Insurance &amp; prior authorization</div><div class="admin-body">IVIG and biologic therapies for immune conditions require thorough prior authorization. We submit with complete documentation and follow up actively.</div></div></div>
+          <div class="admin-step"><div class="admin-circle" style="background:var(--teal);">3</div><div><div class="admin-title">IgG trough level coordination</div><div class="admin-body">For IVIG patients, we coordinate with your physician on IgG trough level monitoring to optimize your dose and schedule.</div></div></div>
+          <div class="admin-step"><div class="admin-circle">4</div><div><div class="admin-title">Careful rate-titrated infusion</div><div class="admin-body">IVIG infusions must be started at a slow rate and titrated up carefully. Our nurses follow your physician's rate protocol and monitor for reactions throughout.</div></div></div>
+          <div class="admin-step" style="padding-bottom:0;"><div class="admin-circle" style="background:var(--teal);">5</div><div><div class="admin-title">Ongoing reporting &amp; lab coordination</div><div class="admin-body">We send treatment reports after every visit and coordinate with your physician on any required lab work or dose adjustments.</div></div></div>
+        </div>
+      </div>
+      <div class="admin-info-cards">
+        <div class="admin-info-card">
+          <div class="admin-info-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2eb8b8" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>IVIG product consistency</div>
+          <div class="admin-info-body">Switching between IVIG products can affect tolerability and efficacy. We work to maintain product consistency for each patient and communicate with your physician before any product changes are made.</div>
+        </div>
+        <div class="admin-info-card">
+          <div class="admin-info-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Observation after biologics</div>
+          <div class="admin-info-body">Some allergy biologics — particularly Xolair — require a 30-minute post-injection observation period due to the risk of anaphylaxis. We follow all observation requirements and are prepared to respond to any reaction.</div>
+        </div>
+        <div class="admin-info-card">
+          <div class="admin-info-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2eb8b8" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Manufacturer assistance</div>
+          <div class="admin-info-body">Most biologic allergy therapies — including Xolair, Fasenra, and Nucala — have manufacturer co-pay programs. We apply for these on your behalf to help reduce your out-of-pocket cost.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cond-faq">
+    <div class="cond-faq-inner">
+      <div class="tag teal">FAQs</div>
+      <h2 class="section-title">Allergy &amp; immunology infusion FAQs</h2>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">How often do I need IVIG infusions?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a">IVIG frequency for immunodeficiency patients is typically every 3–4 weeks, though your immunologist will determine the exact schedule based on your IgG levels, clinical status, and the product used. We work to establish a consistent, predictable schedule and contact you proactively to confirm each upcoming infusion.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">Can I get Xolair injections at your center?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a">Yes. Xolair (omalizumab) injections for severe allergic asthma and chronic urticaria are administered at our center. Xolair requires a mandatory 30-minute observation period after each injection due to the risk of delayed anaphylaxis. We have protocols in place to monitor and respond to any reaction.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">How long does an IVIG infusion take?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a">IVIG infusion time depends on your dose and the specific product. For most immunodeficiency patients, infusions take 2–5 hours. First-time infusions are always started more slowly to monitor tolerability, which may extend the time. Once we know you tolerate the infusion well, the rate can often be increased for subsequent visits.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">Does insurance cover IVIG for immunodeficiency?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a">IVIG for primary immunodeficiency is typically covered under the medical benefit (not pharmacy) and is generally well-covered by Medicare and most commercial insurance plans when prior authorization is obtained. We handle prior authorization completely and will advise you of your estimated out-of-pocket cost before your first infusion.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="refer-strip">
+    <div class="refer-strip-inner">
+      <div>
+        <div class="refer-title">Ready to start your immunology infusion?</div>
+        <div class="refer-sub">Ask your allergist or immunologist for a referral or call us: <a href="tel:8458483626">(845) 848-3626</a></div>
+      </div>
+      <div class="refer-actions">
+        <a href="/patients.html#appointment" class="btn-white">Request appointment</a>
+        <a href="#" class="btn-outline-white">Provider referral form</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     5. WEIGHT MANAGEMENT
+══════════════════════════════════════ -->
+<div class="condition-panel" id="panel-weight">
+
+  <section class="cond-hero">
+    <div class="hero-accent" style="background:linear-gradient(135deg,rgba(106,176,76,0.08) 0%,rgba(46,184,184,0.05) 100%);"></div>
+    <div class="hero-glow"></div>
+    <div class="cond-hero-inner">
+      <div>
+        <div class="breadcrumb"><a href="/">Home</a> <span>›</span> <a href="/conditions.html">Conditions</a> <span>›</span> Weight Management</div>
+        <div class="tag green">Weight Management</div>
+        <h1>Medically supervised<br><em>GLP-1 therapy</em><br>for lasting weight loss</h1>
+        <p class="cond-hero-sub">Our physician-supervised GLP-1 weight loss program combines clinically proven medication with personalized guidance — for patients who need more than diet and exercise alone.</p>
+        <div class="cond-hero-actions">
+          <a href="/patients.html#appointment" class="btn-green">Get started today</a>
+          <a href="#" class="btn-outline-white">How it works</a>
+        </div>
+      </div>
+      <div class="drug-card">
+        <div class="drug-card-title">GLP-1 therapies available</div>
+        <div class="drug-list">
+          <div class="drug-item"><div class="drug-name">Semaglutide</div><div class="drug-generic">Ozempic / Wegovy — Weekly subcutaneous injection</div></div>
+          <div class="drug-item"><div class="drug-name">Tirzepatide</div><div class="drug-generic">Mounjaro / Zepbound — Weekly subcutaneous injection</div></div>
+          <div class="drug-item"><div class="drug-name">Medically supervised program</div><div class="drug-generic">Physician-directed · Personalized dosing · Ongoing monitoring</div></div>
+          <div class="drug-item"><div class="drug-name">Lifestyle guidance</div><div class="drug-generic">Nutritional support · Behavioral coaching · Progress tracking</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cond-overview">
+    <div class="cond-overview-inner">
+      <div>
+        <div class="tag green">About GLP-1 therapy</div>
+        <h2 class="section-title">A proven, medically supervised path to sustainable weight loss</h2>
+        <p class="overview-body">GLP-1 receptor agonists — including semaglutide and tirzepatide — represent a major breakthrough in the medical treatment of obesity and overweight. <strong>Clinical trials have shown 15–22% average body weight reduction</strong> with these medications, a result previously only achievable through bariatric surgery.</p>
+        <p class="overview-body">Unlike diet programs or non-prescription supplements, GLP-1 therapy works by targeting the underlying biology of appetite and metabolism. When combined with lifestyle guidance, these medications can produce meaningful, lasting results for patients who have struggled with weight despite their best efforts.</p>
+        <div class="overview-pull">"GLP-1 therapy isn't a shortcut — it's a clinically proven medical treatment for a complex disease."</div>
+        <a href="#" class="btn-green">Learn if you qualify</a>
+      </div>
+      <div class="conditions-list-box">
+        <div class="conditions-list-title">Who may benefit from GLP-1 therapy</div>
+        <div class="conditions-list">
+          <div class="cond-item"><div class="cond-dot"></div>BMI ≥ 30 (obesity)</div>
+          <div class="cond-item"><div class="cond-dot"></div>BMI ≥ 27 with at least one weight-related condition</div>
+          <div class="cond-item"><div class="cond-dot teal"></div>Type 2 diabetes with excess weight</div>
+          <div class="cond-item"><div class="cond-dot teal"></div>Prediabetes with overweight or obesity</div>
+          <div class="cond-item"><div class="cond-dot"></div>Cardiovascular risk factors related to weight</div>
+          <div class="cond-item"><div class="cond-dot"></div>Sleep apnea related to excess weight</div>
+          <div class="cond-item"><div class="cond-dot teal"></div>Prior failed attempts with diet and exercise alone</div>
+          <div class="cond-item"><div class="cond-dot teal"></div>Patients seeking a non-surgical weight loss option</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cond-meds">
+    <div class="cond-meds-inner">
+      <div class="tag green">How GLP-1 medications work</div>
+      <h2 class="section-title">The science behind GLP-1 therapy</h2>
+      <p class="section-sub">GLP-1 receptor agonists work through several complementary mechanisms to reduce body weight and improve metabolic health.</p>
+      <div class="meds-grid">
+        <div class="med-card">
+          <div class="med-brand">Semaglutide</div><div class="med-generic">Ozempic® / Wegovy®</div>
+          <div class="med-use">A once-weekly GLP-1 receptor agonist that reduces appetite, slows gastric emptying, and improves blood sugar control. Wegovy is FDA-approved specifically for chronic weight management.</div>
+          <div class="med-detail">Administration: weekly subcutaneous injection · Dose titrated over 16–20 weeks</div>
+        </div>
+        <div class="med-card teal-accent">
+          <div class="med-brand">Tirzepatide</div><div class="med-generic">Mounjaro® / Zepbound®</div>
+          <div class="med-use">A dual GIP/GLP-1 receptor agonist — targeting two hormones involved in metabolism. Clinical trials showed up to 22% average body weight reduction, the highest of any approved weight loss medication.</div>
+          <div class="med-detail">Administration: weekly subcutaneous injection · Dose titrated over 20 weeks</div>
+        </div>
+        <div class="med-card">
+          <div class="med-brand">Appetite regulation</div><div class="med-generic">How GLP-1 reduces hunger</div>
+          <div class="med-use">GLP-1 medications act on receptors in the brain's appetite center — reducing hunger signals, decreasing food cravings, and making it easier to feel satisfied with smaller portions.</div>
+          <div class="med-detail">Effect onset: 4–8 weeks · Sustained throughout treatment</div>
+        </div>
+        <div class="med-card teal-accent">
+          <div class="med-brand">Gastric emptying</div><div class="med-generic">Prolonged fullness</div>
+          <div class="med-use">These medications slow the rate at which your stomach empties after eating — prolonging feelings of fullness and reducing overall caloric intake throughout the day.</div>
+          <div class="med-detail">Particularly helpful for portion control and snacking reduction</div>
+        </div>
+        <div class="med-card">
+          <div class="med-brand">Metabolic benefits</div><div class="med-generic">Beyond weight loss</div>
+          <div class="med-use">GLP-1 therapies also improve blood sugar regulation, reduce cardiovascular risk factors, and have demonstrated cardiovascular protection in high-risk patients.</div>
+          <div class="med-detail">Benefits extend to blood pressure, triglycerides, and A1C reduction</div>
+        </div>
+        <div class="med-card teal-accent">
+          <div class="med-brand">Lifestyle integration</div><div class="med-generic">Medication + guidance</div>
+          <div class="med-use">Our program combines GLP-1 medication with personalized nutritional guidance and behavioral support — because the best outcomes happen when medication and lifestyle changes work together.</div>
+          <div class="med-detail">Ongoing support throughout your treatment program</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cond-admin">
+    <div class="cond-admin-inner">
+      <div>
+        <div class="tag green">Our GLP-1 program</div>
+        <h2 class="section-title" style="font-size:32px;">A structured, physician-supervised weight loss program</h2>
+        <div class="admin-steps">
+          <div class="admin-step"><div class="admin-circle">1</div><div><div class="admin-title">Initial consultation</div><div class="admin-body">We review your medical history, current conditions, medications, and weight loss goals to determine if GLP-1 therapy is appropriate for you.</div></div></div>
+          <div class="admin-step"><div class="admin-circle">2</div><div><div class="admin-title">Physician prescription</div><div class="admin-body">Our medical director or your primary care physician prescribes the appropriate GLP-1 medication and starting dose based on your individual profile.</div></div></div>
+          <div class="admin-step"><div class="admin-circle">3</div><div><div class="admin-title">Dose titration</div><div class="admin-body">GLP-1 medications are started at a low dose and increased gradually over weeks to months — minimizing side effects while maximizing benefit.</div></div></div>
+          <div class="admin-step"><div class="admin-circle">4</div><div><div class="admin-title">Ongoing monitoring</div><div class="admin-body">Regular check-ins to assess your progress, manage any side effects, adjust dosing as needed, and provide nutritional and behavioral guidance.</div></div></div>
+          <div class="admin-step" style="padding-bottom:0;"><div class="admin-circle">5</div><div><div class="admin-title">Long-term support</div><div class="admin-body">Weight management is a long-term commitment. We support you through your entire program — celebrating progress and adjusting the plan as your needs evolve.</div></div></div>
+        </div>
+      </div>
+      <div class="admin-info-cards">
+        <div class="admin-info-card">
+          <div class="admin-info-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2.5" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Clinically proven results</div>
+          <div class="admin-info-body">Semaglutide and tirzepatide have demonstrated 15–22% average body weight reduction in clinical trials — results that have transformed the treatment landscape for obesity medicine.</div>
+        </div>
+        <div class="admin-info-card">
+          <div class="admin-info-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2eb8b8" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Insurance coverage</div>
+          <div class="admin-info-body">Coverage for GLP-1 weight loss medications varies significantly by plan. We verify your specific coverage and help identify manufacturer savings programs to reduce your out-of-pocket cost.</div>
+        </div>
+        <div class="admin-info-card">
+          <div class="admin-info-title"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2.5" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>Not a one-size-fits-all program</div>
+          <div class="admin-info-body">We personalize every program — medication choice, dosing schedule, and lifestyle support — based on your individual health profile, goals, and how you respond to treatment.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cond-faq">
+    <div class="cond-faq-inner">
+      <div class="tag green">FAQs</div>
+      <h2 class="section-title">GLP-1 weight management FAQs</h2>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">Am I a good candidate for GLP-1 therapy?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a">GLP-1 medications are FDA-approved for adults with a BMI ≥ 30, or BMI ≥ 27 with at least one weight-related condition such as type 2 diabetes, high blood pressure, or high cholesterol. They are not appropriate for patients with a personal or family history of medullary thyroid carcinoma or MEN2. During your initial consultation we'll review your full medical history to determine if GLP-1 therapy is right for you.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">What are the common side effects?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a">The most common side effects are gastrointestinal — nausea, vomiting, diarrhea, or constipation — and are most common when starting the medication or increasing the dose. These typically improve as your body adjusts. Starting at a low dose and titrating slowly significantly reduces side effects. We'll provide specific guidance on managing any GI symptoms throughout your program.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">How quickly will I see results?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a">Most patients begin to notice appetite changes within the first 2–4 weeks. Meaningful weight loss typically becomes evident by months 2–3, with continued progress as the dose is increased to the therapeutic target. The full effect of these medications is typically reached after 20–24 weeks of treatment. Individual results vary depending on the medication, dose, diet, and activity level.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">Does insurance cover GLP-1 medications for weight loss?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a">Coverage varies significantly. Wegovy and Zepbound are specifically FDA-approved for chronic weight management and are covered by some commercial plans — though many plans still exclude weight loss medications. If you have type 2 diabetes, Ozempic and Mounjaro may be covered under your diabetes benefit. We verify your specific plan coverage at intake and help identify manufacturer savings programs — Novo Nordisk and Eli Lilly both offer significant savings cards that can dramatically reduce your cost.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="this.parentElement.classList.toggle('open')"><span class="faq-q-text">Will I gain the weight back if I stop the medication?</span><span class="faq-icon">+</span></div>
+          <div class="faq-a">Research shows that weight regain is common when GLP-1 medications are discontinued, similar to stopping other chronic disease medications. This reflects the chronic nature of obesity as a disease. Our program focuses on building sustainable lifestyle habits alongside medication so patients have the best possible foundation for long-term maintenance — whether they continue medication or eventually transition off of it.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="refer-strip">
+    <div class="refer-strip-inner">
+      <div>
+        <div class="refer-title">Ready to start your weight loss journey?</div>
+        <div class="refer-sub">Contact us to schedule your initial consultation: <a href="tel:8458483626">(845) 848-3626</a></div>
+      </div>
+      <div class="refer-actions">
+        <a href="#" class="btn-white">Get started today</a>
+        <a href="#" class="btn-outline-white">Learn more about GLP-1</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name"><span class="hv">HV</span> <span class="inf">Infusion</span> <span style="color:var(--teal); font-weight:400;">&amp; Biologics</span></div>
+      <div class="footer-brand-sub">Hudson River Valley Medical PC</div>
+      <p class="footer-desc">Advanced biologic and specialty infusion therapy in a comfortable, patient-centered environment — serving Fishkill, Dutchess County, and the greater Hudson Valley.</p>
+      <div class="footer-contact">
+        <div>400 Westage Business Center Dr, Suite 102A, Fishkill NY 12524</div>
+        <div><a href="tel:8458483626">(845) 848-3626</a></div>
+        <div>Mon–Fri 8am–6pm · Sat 9am–3pm · Sun by appt</div>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Conditions</div>
+      <div class="footer-col-links">
+        <a href="/conditions.html" onclick="showSpec('rheum');return false;">Rheumatology</a>
+        <a href="/conditions.html" onclick="showSpec('neuro');return false;">Neurology</a>
+        <a href="/conditions.html" onclick="showSpec('gi');return false;">Gastroenterology</a>
+        <a href="/conditions.html" onclick="showSpec('allergy');return false;">Allergy &amp; immunology</a>
+        <a href="/conditions.html" onclick="showSpec('weight');return false;">Weight management</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Patients</div>
+      <div class="footer-col-links">
+        <a href="/patients.html">New patients</a>
+        <a href="/patients.html#appointment">Request appointment</a>
+        <a href="/insurance.html">Insurance &amp; billing</a>
+        <a href="/patients.html#expect">What to expect</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Providers</div>
+      <div class="footer-col-links">
+        <a href="/providers.html">For providers</a>
+        <a href="/providers.html#referral-form">Submit a referral</a>
+        <a href="/providers.html#specialties">Drug &amp; formulary list</a>
+        <a href="/about.html">About us</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-legal">© 2025 Hudson River Valley Medical PC · 400 Westage Business Center Dr, Suite 102A, Fishkill NY 12524</span>
+    <span class="footer-legal">Privacy policy · Accessibility · HIPAA notice</span>
+  </div>
+</footer>
+
+<script>
+  function showSpec(id) {
+    document.querySelectorAll('.condition-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.spec-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('panel-' + id).classList.add('active');
+    const tabs = { rheum:0, neuro:1, gi:2, allergy:3, weight:4 };
+    document.querySelectorAll('.spec-tab')[tabs[id]].classList.add('active');
+    window.scrollTo({ top: 144, behavior: 'smooth' });
+  }
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      item.closest('.condition-panel').querySelectorAll('.faq-item.open').forEach(i => { if(i !== item) i.classList.remove('open'); });
+      item.classList.toggle('open');
+    });
+  });
+</script>
+</body>
+</html>

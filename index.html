@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HV Infusion & Biologics | Ambulatory Infusion Center – Fishkill, NY</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Nunito:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green:       #6ab04c;
+    --green-dark:  #4e8a34;
+    --green-light: #8fcc6e;
+    --teal:        #2eb8b8;
+    --teal-dark:   #1a9090;
+    --teal-light:  #55d0d0;
+    --navy:        #0d2233;
+    --navy2:       #122944;
+    --cream:       #f5f9f5;
+    --white:       #ffffff;
+    --gray:        #6b7a8d;
+    --gray-light:  #e8f0e8;
+    --border:      rgba(106,176,76,0.2);
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Nunito Sans', sans-serif; color: var(--navy); background: var(--white); }
+  a { text-decoration: none; color: inherit; }
+  img { display: block; max-width: 100%; }
+
+  /* ── UTILITY ── */
+  .container { max-width: 1140px; margin: 0 auto; padding: 0 40px; }
+  .btn-green {
+    display: inline-block; background: var(--green); color: #fff;
+    padding: 14px 30px; border-radius: 6px; font-size: 14px; font-weight: 600;
+    letter-spacing: 0.04em; transition: background .2s; cursor: pointer; border: none;
+  }
+  .btn-green:hover { background: var(--green-dark); }
+  .btn-teal {
+    display: inline-block; background: var(--teal); color: #fff;
+    padding: 14px 30px; border-radius: 6px; font-size: 14px; font-weight: 600;
+    letter-spacing: 0.04em; transition: background .2s; cursor: pointer; border: none;
+  }
+  .btn-teal:hover { background: var(--teal-dark); }
+  .btn-outline-white {
+    display: inline-block; background: transparent; color: #fff;
+    padding: 13px 28px; border-radius: 6px; font-size: 14px; font-weight: 600;
+    letter-spacing: 0.04em; border: 2px solid rgba(255,255,255,0.5);
+    transition: border-color .2s, color .2s; cursor: pointer;
+  }
+  .btn-outline-white:hover { border-color: #fff; }
+  .tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 11px; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; margin-bottom: 14px;
+  }
+  .tag::before { content: ''; display: block; width: 24px; height: 2px; background: currentColor; border-radius: 1px; }
+  .tag.green { color: var(--green); }
+  .tag.teal  { color: var(--teal); }
+  .tag.white { color: rgba(255,255,255,0.7); }
+  .section-title {
+    font-family: 'Nunito', sans-serif; font-weight: 600;
+    font-size: 38px; line-height: 1.2; margin-bottom: 14px;
+  }
+  .section-sub { font-size: 16px; color: var(--gray); line-height: 1.7; max-width: 520px; margin-bottom: 36px; }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--white); border-bottom: 1px solid var(--border);
+    padding: 0 40px; height: 72px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 0; }
+  .nav-brand { display: flex; flex-direction: column; gap: 1px; margin-left: 12px; }
+  .nav-brand-main { font-family: 'Nunito', sans-serif; font-size: 18px; font-weight: 700; color: var(--navy); line-height: 1; }
+  .nav-brand-main span.hv  { color: var(--teal); }
+  .nav-brand-main span.inf { color: var(--green); }
+  .nav-brand-main span.bio { color: var(--teal); font-weight: 400; font-size: 14px; }
+  .nav-brand-sub { font-size: 9px; color: var(--gray); letter-spacing: 0.07em; }
+  .nav-links { display: flex; align-items: center; gap: 30px; }
+  .nav-links a { font-size: 13px; font-weight: 600; color: var(--navy); letter-spacing: 0.02em; transition: color .15s; }
+  .nav-links a:hover { color: var(--teal); }
+  .nav-links .nav-cta {
+    background: var(--green); color: #fff; padding: 10px 22px;
+    border-radius: 6px; font-size: 13px; font-weight: 700;
+    transition: background .2s;
+  }
+  .nav-links .nav-cta:hover { background: var(--green-dark); color: #fff; }
+  .nav-links .nav-refer {
+    background: transparent; color: var(--teal); padding: 9px 20px;
+    border-radius: 6px; border: 2px solid var(--teal); font-size: 13px; font-weight: 700;
+    transition: background .2s, color .2s;
+  }
+  .nav-links .nav-refer:hover { background: var(--teal); color: #fff; }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--navy);
+    padding: 90px 40px 80px;
+    position: relative; overflow: hidden;
+  }
+  .hero-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 420px; gap: 60px; align-items: center; }
+  .hero-bg {
+    position: absolute; right: 0; top: 0; width: 42%; height: 100%;
+    background: linear-gradient(135deg, rgba(46,184,184,0.07) 0%, rgba(106,176,76,0.05) 100%);
+    border-left: 1px solid rgba(46,184,184,0.12);
+  }
+  .hero-bg2 {
+    position: absolute; bottom: -60px; left: -60px; width: 400px; height: 400px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(106,176,76,0.06) 0%, transparent 70%);
+  }
+  .hero-eyebrow { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--green-light); font-weight: 600; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+  .hero-eyebrow::before { content: ''; width: 28px; height: 2px; background: var(--green); border-radius: 1px; display: block; }
+  .hero h1 {
+    font-family: 'Nunito', sans-serif; font-size: 52px; font-weight: 700;
+    line-height: 1.12; color: var(--white); margin-bottom: 18px;
+  }
+  .hero h1 em { font-style: italic; font-weight: 300; color: var(--teal-light); }
+  .hero-sub { font-size: 17px; color: rgba(255,255,255,0.6); line-height: 1.7; max-width: 480px; margin-bottom: 12px; }
+  .hero-legal { font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.03em; margin-bottom: 36px; }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero-stats { display: flex; gap: 36px; margin-top: 52px; padding-top: 36px; border-top: 1px solid rgba(255,255,255,0.1); }
+  .stat-num { font-family: 'Nunito', sans-serif; font-size: 30px; font-weight: 700; color: var(--green-light); line-height: 1; margin-bottom: 4px; }
+  .stat-label { font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 0.05em; }
+
+  /* Hero card panel */
+  .hero-card {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(46,184,184,0.2);
+    border-radius: 16px; padding: 32px 28px; backdrop-filter: blur(4px);
+    position: relative; z-index: 1;
+  }
+  .hero-card-title { font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+  .hero-card-title::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
+  .specialty-list { display: flex; flex-direction: column; gap: 10px; }
+  .specialty-item {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 8px; padding: 12px 16px; cursor: pointer; transition: border-color .2s, background .2s;
+  }
+  .specialty-item:hover { border-color: rgba(46,184,184,0.4); background: rgba(46,184,184,0.08); }
+  .spec-name { font-size: 13px; font-weight: 700; color: var(--white); margin-bottom: 2px; }
+  .spec-drugs { font-size: 11px; color: rgba(255,255,255,0.4); }
+  .hero-card-footer { margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 12px; color: rgba(255,255,255,0.4); text-align: center; }
+  .hero-card-footer a { color: var(--teal-light); }
+
+  /* ── DUAL AUDIENCE ── */
+  .audience { display: grid; grid-template-columns: 1fr 1fr; }
+  .aud-panel { padding: 64px 60px; }
+  .aud-panel.patient { background: var(--cream); border-right: 1px solid var(--border); }
+  .aud-panel.provider { background: var(--navy2); }
+  .aud-title { font-family: 'Nunito', sans-serif; font-size: 28px; font-weight: 700; line-height: 1.25; margin-bottom: 12px; }
+  .aud-panel.patient .aud-title { color: var(--navy); }
+  .aud-panel.provider .aud-title { color: var(--white); }
+  .aud-body { font-size: 15px; line-height: 1.7; margin-bottom: 24px; }
+  .aud-panel.patient .aud-body { color: var(--gray); }
+  .aud-panel.provider .aud-body { color: rgba(255,255,255,0.55); }
+  .aud-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+  .aud-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.5; }
+  .aud-panel.patient .aud-list li { color: var(--navy); }
+  .aud-panel.provider .aud-list li { color: rgba(255,255,255,0.75); }
+  .check-green { color: var(--green); font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+  .check-teal  { color: var(--teal);  font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+
+  /* ── CONDITIONS ── */
+  .conditions { background: var(--white); padding: 80px 40px; }
+  .conditions-inner { max-width: 1140px; margin: 0 auto; }
+  .conditions-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 40px; }
+  .conditions-header .section-sub { margin-bottom: 0; }
+  .cond-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+  .cond-card {
+    border: 1px solid var(--border); border-radius: 12px; padding: 26px 20px;
+    cursor: pointer; transition: border-color .2s, transform .15s, box-shadow .2s;
+    position: relative; overflow: hidden;
+  }
+  .cond-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--green); transform: scaleX(0); transition: transform .2s; transform-origin: left;
+  }
+  .cond-card:hover { border-color: var(--teal); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(46,184,184,0.12); }
+  .cond-card:hover::before { transform: scaleX(1); }
+  .cond-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--gray-light); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+  .cond-icon svg { width: 20px; height: 20px; }
+  .cond-specialty { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
+  .cond-name { font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
+  .cond-drugs { font-size: 11px; color: var(--gray); line-height: 1.6; }
+  .cond-arrow { position: absolute; bottom: 18px; right: 18px; font-size: 16px; color: var(--green); opacity: 0; transition: opacity .2s; }
+  .cond-card:hover .cond-arrow { opacity: 1; }
+
+  /* ── WHY US ── */
+  .why { background: var(--cream); padding: 80px 40px; }
+  .why-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 380px 1fr; gap: 72px; align-items: start; }
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .why-card {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 12px; padding: 28px 24px;
+    transition: border-color .2s;
+  }
+  .why-card:hover { border-color: var(--green); }
+  .why-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--gray-light); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+  .why-title { font-family: 'Nunito', sans-serif; font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .why-body { font-size: 13px; color: var(--gray); line-height: 1.65; }
+
+  /* ── EXPERIENCE ── */
+  .experience { background: var(--white); padding: 80px 40px; }
+  .exp-inner { max-width: 1140px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+  .exp-visual {
+    background: var(--cream); border-radius: 16px; height: 380px;
+    border: 1px solid var(--border); display: flex; align-items: center;
+    justify-content: center; flex-direction: column; gap: 12px; position: relative; overflow: hidden;
+  }
+  .exp-visual-icon { font-size: 48px; opacity: 0.15; }
+  .exp-visual-label { font-size: 13px; color: var(--gray); }
+  .exp-visual-badge {
+    position: absolute; bottom: 24px; left: 24px;
+    background: var(--green); color: #fff; border-radius: 8px;
+    padding: 10px 16px; font-size: 12px; font-weight: 700;
+  }
+  .exp-visual-badge span { display: block; font-size: 10px; font-weight: 400; opacity: 0.8; margin-top: 1px; }
+  .exp-features { display: flex; flex-direction: column; gap: 22px; margin-top: 28px; }
+  .exp-feature { display: flex; gap: 16px; }
+  .exp-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--green); flex-shrink: 0; margin-top: 5px; }
+  .exp-feat-title { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .exp-feat-body { font-size: 13px; color: var(--gray); line-height: 1.6; }
+
+  /* ── PROVIDER STRIP ── */
+  .provider-strip { background: var(--navy); padding: 60px 40px; }
+  .provider-inner { max-width: 1140px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+  .prov-left {}
+  .prov-eyebrow { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--green-light); font-weight: 600; margin-bottom: 10px; }
+  .prov-title { font-family: 'Nunito', sans-serif; font-size: 32px; font-weight: 700; color: var(--white); line-height: 1.2; margin-bottom: 8px; }
+  .prov-sub { font-size: 14px; color: rgba(255,255,255,0.5); }
+  .prov-sub a { color: var(--teal-light); }
+  .prov-actions { display: flex; gap: 12px; flex-shrink: 0; }
+
+  /* ── STEPS ── */
+  .steps { background: var(--cream); padding: 80px 40px; }
+  .steps-inner { max-width: 1140px; margin: 0 auto; }
+  .steps-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; margin-top: 48px; position: relative; }
+  .steps-grid::before { content: ''; position: absolute; top: 28px; left: calc(12.5% + 16px); right: calc(12.5% + 16px); height: 2px; background: linear-gradient(90deg, var(--green), var(--teal)); border-radius: 1px; }
+  .step { text-align: center; padding: 0 20px; }
+  .step-num {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: var(--white); border: 2px solid var(--green);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 700; color: var(--green);
+    margin: 0 auto 20px; position: relative; z-index: 1;
+  }
+  .step:nth-child(2) .step-num, .step:nth-child(4) .step-num { border-color: var(--teal); color: var(--teal); }
+  .step-title { font-family: 'Nunito', sans-serif; font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .step-body { font-size: 13px; color: var(--gray); line-height: 1.6; }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials { background: var(--white); padding: 80px 40px; }
+  .test-inner { max-width: 1140px; margin: 0 auto; }
+  .test-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 40px; }
+  .test-card {
+    border: 1px solid var(--border); border-radius: 12px; padding: 28px;
+    transition: border-color .2s;
+  }
+  .test-card:hover { border-color: var(--teal); }
+  .test-stars { color: var(--green); font-size: 14px; margin-bottom: 14px; letter-spacing: 2px; }
+  .test-quote { font-size: 14px; color: var(--navy); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
+  .test-author { display: flex; align-items: center; gap: 10px; }
+  .test-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--gray-light); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: var(--teal); flex-shrink: 0; }
+  .test-name { font-size: 13px; font-weight: 700; color: var(--navy); }
+  .test-detail { font-size: 11px; color: var(--gray); }
+
+  /* ── CTA BANNER ── */
+  .cta-banner { background: var(--green); padding: 70px 40px; text-align: center; }
+  .cta-inner { max-width: 680px; margin: 0 auto; }
+  .cta-title { font-family: 'Nunito', sans-serif; font-size: 38px; font-weight: 700; color: var(--white); margin-bottom: 14px; line-height: 1.2; }
+  .cta-sub { font-size: 16px; color: rgba(255,255,255,0.75); margin-bottom: 36px; line-height: 1.6; }
+  .cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-white { background: var(--white); color: var(--green); padding: 14px 30px; border-radius: 6px; font-size: 14px; font-weight: 700; letter-spacing: 0.04em; transition: opacity .2s; }
+  .btn-white:hover { opacity: 0.9; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--navy); padding: 56px 40px 28px; }
+  .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; max-width: 1140px; margin: 0 auto 40px; }
+  .footer-brand-name { font-family: 'Nunito', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+  .footer-brand-name .hv  { color: var(--teal); }
+  .footer-brand-name .inf { color: var(--green); }
+  .footer-brand-sub { font-size: 10px; color: rgba(255,255,255,0.35); letter-spacing: 0.07em; margin-bottom: 14px; }
+  .footer-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.7; margin-bottom: 16px; }
+  .footer-contact { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.8; }
+  .footer-contact a { color: var(--teal-light); }
+  .footer-col-title { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-light); font-weight: 700; margin-bottom: 16px; }
+  .footer-col-links { display: flex; flex-direction: column; gap: 9px; }
+  .footer-col-links a { font-size: 13px; color: rgba(255,255,255,0.45); transition: color .15s; }
+  .footer-col-links a:hover { color: var(--white); }
+  .footer-bottom { max-width: 1140px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.07); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+  .footer-legal { font-size: 11px; color: rgba(255,255,255,0.22); }
+
+  /* SVG icons inline */
+  .icon-activity { stroke: var(--teal); fill: none; stroke-width: 2; stroke-linecap: round; }
+</style>
+</head>
+<body>
+
+<!-- ════════════════ NAV ════════════════ -->
+<nav>
+  <div class="nav-logo">
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+      <path d="M20 4 A16 16 0 1 0 34 12" stroke="#6ab04c" stroke-width="2.5" stroke-linecap="round"/>
+      <g transform="translate(30.5,8) rotate(35)">
+        <ellipse cx="0" cy="0" rx="4" ry="6" fill="#2eb8b8"/>
+        <line x1="0" y1="-5" x2="0" y2="5" stroke="#1a9090" stroke-width="0.8"/>
+      </g>
+      <text x="20" y="26" font-family="'Nunito Sans',sans-serif" font-size="11" font-weight="700" fill="#2eb8b8" text-anchor="middle">HV</text>
+    </svg>
+    <div class="nav-brand">
+      <div class="nav-brand-main"><span class="hv">HV</span> <span class="inf">Infusion</span> <span class="bio">&amp; Biologics</span></div>
+      <div class="nav-brand-sub">Hudson River Valley Medical PC</div>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="/conditions.html">Conditions</a>
+    <a href="/patients.html">For patients</a>
+    <a href="/providers.html">For providers</a>
+    <a href="/insurance.html">Insurance</a>
+    <a href="/about.html">About</a>
+    <a href="/providers.html#referral-form" class="nav-refer">Refer a patient</a>
+    <a href="/patients.html#appointment" class="nav-cta">Request appointment</a>
+  </div>
+</nav>
+
+<!-- ════════════════ HERO ════════════════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-bg2"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">Ambulatory Infusion Center — Fishkill, NY</div>
+      <h1>Advanced <em>biologic</em><br>infusion care,<br>close to home</h1>
+      <p class="hero-sub">Specialized infusion therapy for complex conditions — in a calm, private, clinically excellent center designed around you.</p>
+      <p class="hero-legal">A service of Hudson River Valley Medical PC &nbsp;·&nbsp; 400 Westage Business Center Dr, Suite 102A, Fishkill NY 12524</p>
+      <div class="hero-actions">
+        <a href="/patients.html#appointment" class="btn-green">Request an appointment</a>
+        <a href="#" class="btn-outline-white">Learn what to expect</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">5</div>
+          <div class="stat-label">Specialties treated</div>
+        </div>
+        <div>
+          <div class="stat-num">Same week</div>
+          <div class="stat-label">Appointment availability</div>
+        </div>
+        <div>
+          <div class="stat-num">Mon–Sat</div>
+          <div class="stat-label">Open 6 days a week</div>
+        </div>
+        <div>
+          <div class="stat-num">Most plans</div>
+          <div class="stat-label">Insurance accepted</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero card -->
+    <div class="hero-card">
+      <div class="hero-card-title">Biologic therapies we administer</div>
+      <div class="specialty-list">
+        <div class="specialty-item">
+          <div class="spec-name">Rheumatology</div>
+          <div class="spec-drugs">Remicade · Orencia · Actemra · Benlysta · Reclast</div>
+        </div>
+        <div class="specialty-item">
+          <div class="spec-name">Neurology</div>
+          <div class="spec-drugs">Tysabri · Ocrevus · Soliris · IVIG</div>
+        </div>
+        <div class="specialty-item">
+          <div class="spec-name">Gastroenterology</div>
+          <div class="spec-drugs">Remicade · Entyvio · Stelara · Simponi Aria</div>
+        </div>
+        <div class="specialty-item">
+          <div class="spec-name">Allergy &amp; Immunology</div>
+          <div class="spec-drugs">IVIG · SCIG · Xolair · Fasenra</div>
+        </div>
+        <div class="specialty-item">
+          <div class="spec-name">Weight Management</div>
+          <div class="spec-drugs">GLP-1 · Semaglutide · Tirzepatide</div>
+        </div>
+      </div>
+      <div class="hero-card-footer">Not sure if we carry your medication? <a href="#">View full drug list →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ DUAL AUDIENCE ════════════════ -->
+<div class="audience">
+  <div class="aud-panel patient">
+    <div class="tag green">For patients</div>
+    <h2 class="aud-title">Infusion therapy in a setting that puts you first</h2>
+    <p class="aud-body">Whether you're starting a new biologic or continuing long-term treatment, our center offers a comfortable, private alternative to hospital infusion.</p>
+    <ul class="aud-list">
+      <li><span class="check-green">✓</span> Private &amp; semi-private suites with plush recliners</li>
+      <li><span class="check-green">✓</span> Same-week scheduling, flexible hours Mon–Sat</li>
+      <li><span class="check-green">✓</span> Skilled infusion nurses — personalized, attentive care</li>
+      <li><span class="check-green">✓</span> Free parking, complimentary amenities, seamless check-in</li>
+      <li><span class="check-green">✓</span> Most major insurance and Medicare plans accepted</li>
+    </ul>
+    <a href="/patients.html" class="btn-green">New patient information</a>
+  </div>
+  <div class="aud-panel provider">
+    <div class="tag teal">For providers</div>
+    <h2 class="aud-title">A trusted extension of your practice</h2>
+    <p class="aud-body">We specialize in biologic and specialty infusions — giving your patients expert care while keeping you fully in the loop at every step.</p>
+    <ul class="aud-list">
+      <li><span class="check-teal">✓</span> Rapid prior auth support &amp; insurance coordination</li>
+      <li><span class="check-teal">✓</span> Detailed treatment reports delivered to your office</li>
+      <li><span class="check-teal">✓</span> Direct line to our clinical team — always accessible</li>
+      <li><span class="check-teal">✓</span> Quick scheduling for your patients, often same week</li>
+      <li><span class="check-teal">✓</span> Online referral form — takes less than 5 minutes</li>
+    </ul>
+    <a href="/providers.html#referral-form" class="btn-teal">Submit a referral →</a>
+  </div>
+</div>
+
+<!-- ════════════════ CONDITIONS ════════════════ -->
+<section class="conditions">
+  <div class="conditions-inner">
+    <div class="conditions-header">
+      <div>
+        <div class="tag green">Conditions we treat</div>
+        <h2 class="section-title">Biologic &amp; specialty<br>infusion therapies</h2>
+      </div>
+      <p class="section-sub">We administer a broad range of biologic, immunologic, and specialty infusion therapies across five clinical specialties — all coordinated with your referring physician.</p>
+    </div>
+    <div class="cond-grid">
+
+      <div class="cond-card">
+        <div class="cond-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2eb8b8" stroke-width="2" stroke-linecap="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </div>
+        <div class="cond-specialty">Rheumatology</div>
+        <div class="cond-name">Inflammatory &amp; autoimmune</div>
+        <div class="cond-drugs">Remicade · Orencia · Actemra · Benlysta · Reclast · Prolia</div>
+        <div class="cond-arrow">→</div>
+      </div>
+
+      <div class="cond-card">
+        <div class="cond-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2eb8b8" stroke-width="2" stroke-linecap="round">
+            <circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>
+          </svg>
+        </div>
+        <div class="cond-specialty">Neurology</div>
+        <div class="cond-name">Neurological disorders</div>
+        <div class="cond-drugs">Tysabri · Ocrevus · Soliris · IVIG · Plasma exchange</div>
+        <div class="cond-arrow">→</div>
+      </div>
+
+      <div class="cond-card">
+        <div class="cond-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2eb8b8" stroke-width="2" stroke-linecap="round">
+            <path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/>
+          </svg>
+        </div>
+        <div class="cond-specialty">Gastroenterology</div>
+        <div class="cond-name">GI &amp; inflammatory bowel</div>
+        <div class="cond-drugs">Remicade · Entyvio · Stelara · Simponi Aria</div>
+        <div class="cond-arrow">→</div>
+      </div>
+
+      <div class="cond-card">
+        <div class="cond-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#2eb8b8" stroke-width="2" stroke-linecap="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div class="cond-specialty">Allergy &amp; Immunology</div>
+        <div class="cond-name">Immune deficiencies</div>
+        <div class="cond-drugs">IVIG · SCIG · Xolair · Fasenra · Dupixent IV</div>
+        <div class="cond-arrow">→</div>
+      </div>
+
+      <div class="cond-card">
+        <div class="cond-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2" stroke-linecap="round">
+            <line x1="12" y1="20" x2="12" y2="10"/>
+            <line x1="18" y1="20" x2="18" y2="4"/>
+            <line x1="6" y1="20" x2="6" y2="16"/>
+          </svg>
+        </div>
+        <div class="cond-specialty">Weight Management</div>
+        <div class="cond-name">GLP-1 therapy</div>
+        <div class="cond-drugs">Medically supervised · Semaglutide · Tirzepatide</div>
+        <div class="cond-arrow">→</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ WHY US ════════════════ -->
+<section class="why">
+  <div class="why-inner">
+    <div>
+      <div class="tag green">Why choose us</div>
+      <h2 class="section-title">A better infusion experience</h2>
+      <p class="section-sub">HV Infusion &amp; Biologics was built from the ground up to be different from hospital infusion — more comfortable, more personal, and more convenient.</p>
+      <a href="#" class="btn-green" style="margin-top:8px;">About our center</a>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2" stroke-linecap="round">
+            <rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <div class="why-title">Not a hospital</div>
+        <div class="why-body">Skip the long waits and crowded waiting rooms. Our boutique center is built exclusively for infusion patients.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2eb8b8" stroke-width="2" stroke-linecap="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <div class="why-title">Expert nursing team</div>
+        <div class="why-body">Our infusion-specialized nurses bring deep experience with biologic therapies and genuinely care about your comfort.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6ab04c" stroke-width="2" stroke-linecap="round">
+            <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <div class="why-title">Rapid scheduling</div>
+        <div class="why-body">Same-week appointments available. We coordinate directly with your physician to get your treatment started fast.</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2eb8b8" stroke-width="2" stroke-linecap="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div class="why-title">Insurance-savvy</div>
+        <div class="why-body">We handle prior authorizations, coordinate benefits, and accept most major commercial and Medicare plans.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ EXPERIENCE ════════════════ -->
+<section class="experience">
+  <div class="exp-inner">
+    <div class="exp-visual">
+      <svg width="64" height="64" viewBox="0 0 64 64" opacity="0.15" fill="none">
+        <rect x="8" y="20" width="48" height="32" rx="6" stroke="#2eb8b8" stroke-width="2"/>
+        <path d="M24 20v-4a8 8 0 0 1 16 0v4" stroke="#6ab04c" stroke-width="2"/>
+        <circle cx="32" cy="36" r="6" stroke="#2eb8b8" stroke-width="2"/>
+      </svg>
+      <div class="exp-visual-label">Center photography coming soon</div>
+      <div class="exp-visual-badge">
+        Fishkill, NY
+        <span>400 Westage Business Center Dr</span>
+      </div>
+    </div>
+    <div>
+      <div class="tag green">The patient experience</div>
+      <h2 class="section-title">Your wellness oasis<br>in Fishkill</h2>
+      <p class="section-sub">From the moment you arrive, every detail is designed to make your infusion as comfortable and stress-free as possible.</p>
+      <div class="exp-features">
+        <div class="exp-feature">
+          <div class="exp-dot"></div>
+          <div>
+            <div class="exp-feat-title">Spa-inspired private suites</div>
+            <div class="exp-feat-body">Plush reclining chairs, soft blankets, calming lighting, and dedicated personal space — designed for multi-hour visits.</div>
+          </div>
+        </div>
+        <div class="exp-feature">
+          <div class="exp-dot"></div>
+          <div>
+            <div class="exp-feat-title">Complimentary amenities</div>
+            <div class="exp-feat-body">Free parking, refreshments, Wi-Fi, and entertainment — because a long infusion shouldn't feel like a long infusion.</div>
+          </div>
+        </div>
+        <div class="exp-feature">
+          <div class="exp-dot"></div>
+          <div>
+            <div class="exp-feat-title">Flexible hours, 6 days a week</div>
+            <div class="exp-feat-body">Open Monday through Saturday with evening availability — built around your schedule, not ours.</div>
+          </div>
+        </div>
+        <div class="exp-feature">
+          <div class="exp-dot"></div>
+          <div>
+            <div class="exp-feat-title">Personalized, attentive care</div>
+            <div class="exp-feat-body">Our team takes time to get to know you — your preferences, your history, and what makes your visit feel right.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ HOW IT WORKS ════════════════ -->
+<section class="steps">
+  <div class="steps-inner">
+    <div class="tag green">Getting started</div>
+    <h2 class="section-title">From referral to first infusion —<br>we handle the details</h2>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-title">Physician refers</div>
+        <div class="step-body">Your doctor submits a referral online, by fax, or by phone. Takes less than 5 minutes.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-title">We verify insurance</div>
+        <div class="step-body">Our team handles prior authorization and benefits coordination on your behalf.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-title">You get scheduled</div>
+        <div class="step-body">We contact you directly to book your first appointment — often same week.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-title">Infusion &amp; follow-up</div>
+        <div class="step-body">Receive your treatment and we send a full report back to your physician.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ TESTIMONIALS ════════════════ -->
+<section class="testimonials">
+  <div class="test-inner">
+    <div class="tag green">Patient stories</div>
+    <h2 class="section-title">What our patients say</h2>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <div class="test-quote">"After years of hospital infusions, coming here felt like a completely different world. The nurses remembered my name, my preferences — everything. I actually look forward to my appointments now."</div>
+        <div class="test-author">
+          <div class="test-avatar">SM</div>
+          <div>
+            <div class="test-name">Sarah M.</div>
+            <div class="test-detail">Rheumatoid arthritis · Remicade patient</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <div class="test-quote">"The scheduling was effortless and they handled all the insurance paperwork. I was seen same week. The facility is beautiful and the staff is outstanding."</div>
+        <div class="test-author">
+          <div class="test-avatar">JR</div>
+          <div>
+            <div class="test-name">James R.</div>
+            <div class="test-detail">Crohn's disease · Entyvio patient</div>
+          </div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div class="test-stars">★★★★★</div>
+        <div class="test-quote">"As a referring physician, the communication from HV Infusion is exceptional. My patients are always well-cared for and I receive timely updates. Highly recommend."</div>
+        <div class="test-author">
+          <div class="test-avatar">Dr</div>
+          <div>
+            <div class="test-name">Dr. A. Patel</div>
+            <div class="test-detail">Referring rheumatologist</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ PROVIDER STRIP ════════════════ -->
+<section class="provider-strip">
+  <div class="provider-inner">
+    <div class="prov-left">
+      <div class="prov-eyebrow">For referring physicians &amp; providers</div>
+      <div class="prov-title">Ready to refer your first patient?</div>
+      <div class="prov-sub">We respond within one business day. &nbsp;Phone: <a href="tel:8458483626">(845) 848-3626</a> &nbsp;·&nbsp; Fax available on request</div>
+    </div>
+    <div class="prov-actions">
+      <a href="#" class="btn-green">Online referral form</a>
+      <a href="#" class="btn-outline-white">Download referral PDF</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ CTA BANNER ════════════════ -->
+<section class="cta-banner">
+  <div class="cta-inner">
+    <h2 class="cta-title">Ready to experience infusion care done differently?</h2>
+    <p class="cta-sub">Request an appointment today — our team will contact you within one business day to confirm your visit and answer any questions.</p>
+    <div class="cta-actions">
+      <a href="#" class="btn-white">Request an appointment</a>
+      <a href="#" class="btn-outline-white">Call (845) 848-3626</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ FOOTER ════════════════ -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name"><span class="hv">HV</span> <span class="inf">Infusion</span> <span style="color:var(--teal); font-weight:400;">&amp; Biologics</span></div>
+      <div class="footer-brand-sub">Hudson River Valley Medical PC</div>
+      <p class="footer-desc">Advanced biologic and specialty infusion therapy in a comfortable, patient-centered environment — serving Fishkill, Dutchess County, and the greater Hudson Valley.</p>
+      <div class="footer-contact">
+        <div>📍 400 Westage Business Center Dr, Suite 102A, Fishkill NY 12524</div>
+        <div>📞 <a href="tel:8458483626">(845) 848-3626</a></div>
+        <div>🕐 Mon–Fri 8am–6pm &nbsp;·&nbsp; Sat 9am–3pm &nbsp;·&nbsp; Sun by appointment</div>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Conditions</div>
+      <div class="footer-col-links">
+        <a href="#">Rheumatology</a>
+        <a href="#">Neurology</a>
+        <a href="#">Gastroenterology</a>
+        <a href="#">Allergy &amp; immunology</a>
+        <a href="#">Weight management</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Patients</div>
+      <div class="footer-col-links">
+        <a href="/patients.html">New patients</a>
+        <a href="/patients.html#appointment">Request appointment</a>
+        <a href="/insurance.html">Insurance &amp; billing</a>
+        <a href="/patients.html#expect">What to expect</a>
+        <a href="/patients.html">Patient portal</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Providers</div>
+      <div class="footer-col-links">
+        <a href="/providers.html">For providers</a>
+        <a href="/providers.html#referral-form">Submit a referral</a>
+        <a href="/providers.html#specialties">Drug &amp; formulary list</a>
+        <a href="/about.html">Contact our team</a>
+        <a href="/about.html">About us</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-legal">© 2025 Hudson River Valley Medical PC · 400 Westage Business Center Dr, Suite 102A, Fishkill NY 12524 · (845) 848-3626</span>
+    <span class="footer-legal">Privacy policy &nbsp;·&nbsp; Accessibility &nbsp;·&nbsp; HIPAA notice</span>
+  </div>
+</footer>
+
+</body>
+</html>
